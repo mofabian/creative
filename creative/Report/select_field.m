@@ -15,7 +15,7 @@ function field = select_field( fields, important_places, side )
             j_y = ceil(important_places{j}.ID/side);
             j_x = important_places{j}.ID - ((j_y-1) * side);
             
-            importance = 1/sqrt((i_y - j_y)^2 + (i_x - j_x)^2) * important_places{j}.Importance;
+            importance = 1/sqrt((i_y - j_y)^2 + (i_x - j_x)^2 + 1) * important_places{j}.Importance;
             
             if (importance >= maximportance)
                 maximportance = importance;

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.11.20)  9 DEC 2011 11:02
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.11.20)  15 DEC 2011 12:46
 entering extended mode
  %&-line parsing enabled.
 **reportTemplate.tex
@@ -268,25 +268,18 @@ Package epstopdf Info: Source file: <ETHlogo.eps>
 (epstopdf)                    date: 2008-01-16 19:52:14
 (epstopdf)                    size: 179075 bytes
 (epstopdf)             Output file: <ETHlogo-eps-converted-to.pdf>
+(epstopdf)                    date: 2011-03-07 14:36:44
+(epstopdf)                    size: 14309 bytes
 (epstopdf)             Command: <epstopdf --outfile=ETHlogo-eps-converted-to.pd
 f ETHlogo.eps>
 (epstopdf)             \includegraphics on input line 5.
-runsystem(epstopdf --outfile=ETHlogo-eps-converted-to.pdf ETHlogo.eps)...disabl
-ed.
+Package epstopdf Info: Output file is already uptodate.
+ <ETHlogo-eps-converted-to.pdf, id=1, 179.67125pt x 45.16875pt>
+File: ETHlogo-eps-converted-to.pdf Graphic file (type pdf)
 
-Package epstopdf Info: Result file: <ETHlogo-eps-converted-to.pdf>.
-
-
-! Package pdftex.def Error: File `ETHlogo-eps-converted-to.pdf' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.5 \includegraphics[width=5cm]{ETHlogo.eps}
-                                            
-? 
+<use ETHlogo-eps-converted-to.pdf>
 LaTeX Font Info:    Try loading font information for U+msa on input line 34.
+
 (/usr/share/texmf-texlive/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
@@ -296,49 +289,93 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 34.
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )) [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (5.3226pt too wide) in paragraph at lines 42--60
- [] 
- []
-
-[2] (./reportTemplate.toc)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./ETHlogo-eps-converted-to
+.pdf>] [2]
+(./reportTemplate.toc [3])
 \tf@toc=\write3
 \openout3 = `reportTemplate.toc'.
 
- [3]
-Underfull \hbox (badness 10000) in paragraph at lines 94--96
+ [4]
+Underfull \hbox (badness 10000) in paragraph at lines 93--102
 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 97.
-(/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
-File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 97.
 
-Underfull \hbox (badness 10000) in paragraph at lines 109--110
+Underfull \hbox (badness 10000) in paragraph at lines 93--102
 
  []
 
-[4] [5] (./reportTemplate.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 93--102
+
+ []
+
+[5]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ú in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ù in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ú in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ù in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ú in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ù in font cmr12!
+
+Underfull \hbox (badness 10000) in paragraph at lines 106--112
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 106--112
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 106--112
+
+ []
+
+[6] [7]
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 13
+3.
+
+[8] [9] [10]
+Underfull \hbox (badness 10000) in paragraph at lines 195--197
+
+ []
+
+[11] [12] [13] [14] [15] [16] [17] [18] (./reportTemplate.aux) ) 
 Here is how much of TeX's memory you used:
- 2868 strings out of 495061
- 36975 string characters out of 1182620
- 94172 words of memory out of 3000000
- 5998 multiletter control sequences out of 15000+50000
- 12278 words of font info for 48 fonts, out of 3000000 for 9000
+ 2861 strings out of 495061
+ 36892 string characters out of 1182620
+ 97172 words of memory out of 3000000
+ 5993 multiletter control sequences out of 15000+50000
+ 13026 words of font info for 50 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 41i,10n,24p,296b,252s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texmf-texlive/fonts/type1/public/am
-sfonts/cm/cmbx12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/c
-mr10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></u
-sr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/tex
-mf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/
-fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on reportTemplate.pdf (5 pages, 84932 bytes).
+ 41i,11n,24p,636b,252s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/tex
+mf-texlive/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-texlive/
+fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-texlive/fonts/type1
+/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-texlive/fonts/type1/public/ams
+fonts/cm/cmmi8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr
+10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
+/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf
+-texlive/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-texlive/font
+s/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/pub
+lic/amsfonts/cm/cmsy8.pfb>
+Output written on reportTemplate.pdf (18 pages, 179466 bytes).
 PDF statistics:
- 42 PDF objects out of 1000 (max. 8388607)
+ 103 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
