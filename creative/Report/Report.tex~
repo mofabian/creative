@@ -7,7 +7,11 @@
 \usepackage{epstopdf}
 \usepackage{natbib}
 \usepackage{amssymb, amsmath}
+\usepackage{a4page}
+\usepackage{listings}
+\usepackage{color}
 \DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\definecolor{listinggray}{gray}{0.9}
 
 %\title{Title}
 %\author{Name 1, Name 2}
@@ -86,7 +90,7 @@
 
 \section{Abstract}
 
-This project presents an agent-based computational model of civil violence. Therein goes the central authority for it to suppress decentralized  rebellion. In general we build on a existing model of J.M.Epstein and try to make it more realistic by changing and adding certain properties of the ''agent'' and ''cop''. [... to complete in the end...]
+This project presents an agent-based computational model of civil violence. Therein goes the central authority for it to suppress decentralized  rebellion. In general we build on an existing model of J.M.Epstein and try to make it more realistic by changing and adding certain properties of the ''agent'' and ''cop''. The focus of our work lies on the dynamics of the system and not on the political or social order. We are going to compare the results of our model, with those of J.M.Epstein.
 
 \section{Individual contributions}
 
@@ -242,7 +246,7 @@ In order to model militant uprisings we needed some functionality for Agents to 
 \subsubsection{Murder success rate}
 Depending on the tools available to murdering Agents, they may or may not succeed in killing a cop. This is used to differentiate between countries with easy/difficult access to weapons for civilians.
 
-\subsubsection{Murder assasin death rate}
+\subsubsection{Murder assassin death rate}
 Sometimes Agents might get killed while trying to kill a Cop. If the Cops are taken by suprise the revolution might go much more smoothly than if all Cops are heavily armed and have orders to kill every attacker.
 
 \subsubsection{Vision Min/Max}
@@ -288,7 +292,84 @@ USE THE FUNDAMENTAL QUESTIONS POSED IN THE PROPOSAL
 
 Modeling civil violence: An agent-based computational approach, Eppstein 2002
 
+\section{Appendix A: Proposal}
 
+\includegraphics[bb=1.0in 1.0in 7.5in 10in,page=1]{Proposal.pdf}
+\newpage
+\includegraphics[bb=1.0in 1.0in 7.5in 10in,page=2]{Proposal.pdf}
+\newpage
+\includegraphics[bb=1.0in 1.0in 7.5in 10in,page=3]{Proposal.pdf}
+
+\section{Appendix B: Code}
+
+Listing from source file \texttt{Agent.m} \\
+
+%---------------------------------------------------------------
+\lstset{language=matlab}
+\lstset{backgroundcolor=\color{listinggray},rulecolor=\color{blue}}
+\lstset{linewidth=\textwidth}
+\lstset{commentstyle=\textit, stringstyle=\upshape,showspaces=false}
+\lstset{frame=trBL,frameround=tttt}
+\lstinputlisting[caption=Agent,label=lst:Agent]{Agent.m}
+%---------------------------------------------------------------
+
+Listing from source file \texttt{Cop.m} \\
+
+%---------------------------------------------------------------
+\lstset{language=matlab}
+\lstset{backgroundcolor=\color{listinggray},rulecolor=\color{blue}}
+\lstset{linewidth=\textwidth}
+\lstset{commentstyle=\textit, stringstyle=\upshape,showspaces=false}
+\lstset{frame=trBL,frameround=tttt}
+\lstinputlisting[caption=Cop,label=lst:Agent]{Cop.m}
+%---------------------------------------------------------------
+
+Listing from source file \texttt{Display.m} \\
+
+%---------------------------------------------------------------
+\lstset{language=matlab}
+\lstset{backgroundcolor=\color{listinggray},rulecolor=\color{blue}}
+\lstset{linewidth=\textwidth}
+\lstset{commentstyle=\textit, stringstyle=\upshape,showspaces=false}
+\lstset{frame=trBL,frameround=tttt}
+\lstinputlisting[caption=Display,label=lst:Display]{Display.m}
+%---------------------------------------------------------------
+
+Listing from source file \texttt{Empty.m} \\
+
+%---------------------------------------------------------------
+\lstset{language=matlab}
+\lstset{backgroundcolor=\color{listinggray},rulecolor=\color{blue}}
+\lstset{linewidth=\textwidth}
+\lstset{commentstyle=\textit, stringstyle=\upshape,showspaces=false}
+\lstset{frame=trBL,frameround=tttt}
+\lstinputlisting[caption=Empty,label=lst:Empty]{Empty.m}
+%---------------------------------------------------------------
+
+Listing from source file \texttt{Field.m} \\
+
+%---------------------------------------------------------------
+\lstset{language=matlab}
+\lstset{backgroundcolor=\color{listinggray},rulecolor=\color{blue}}
+\lstset{linewidth=\textwidth}
+\lstset{commentstyle=\textit, stringstyle=\upshape,showspaces=false}
+\lstset{frame=trBL,frameround=tttt}
+\lstinputlisting[caption=Field,label=lst:Field]{Field.m}
+%---------------------------------------------------------------
+
+Listing from source file \texttt{select_field.m} \\
+
+%---------------------------------------------------------------
+\lstset{language=matlab}
+\lstset{backgroundcolor=\color{listinggray},rulecolor=\color{blue}}
+\lstset{linewidth=\textwidth}
+\lstset{commentstyle=\textit, stringstyle=\upshape,showspaces=false}
+\lstset{frame=trBL,frameround=tttt}
+\lstinputlisting[caption=select_field,label=lst:select_field]{select_field.m}
+%---------------------------------------------------------------
+
+
+\clearpage
 
 
 \end{document}  
