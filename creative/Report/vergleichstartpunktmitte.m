@@ -2,16 +2,16 @@
 
 clear all;
 
-side = 20;
+side = 40;
 %Side of the playfield
 
-L = 0.9;
+L = 0.8;
 %Legitimacy of the Regime
 
-O_to_U_Ratio = 0.5;     
+O_to_U_Ratio = 0.7;     
 %Occupied Spaces to Unoccupied Spaces
 
-C_to_A_Ratio = 0.4;     
+C_to_A_Ratio = 0.0;     
 %Cops to Agents Ratio
 
 Jailterm_Min = 3;          
@@ -26,62 +26,62 @@ Jailsentence = @() random('Uniform',Jailterm_Min,Jailterm_Max,1,1);
 Better_Deterrent_of_Jailtime = 0;
 %In Paper alpha=0
 
-Better_Aggreviance_when_Agent_leaves_Jail = true;
+Better_Aggreviance_when_Agent_leaves_Jail = false;
 Aggreviance = @() random('Uniform',-0.5,0.5,1,1);
 
-Activism_Threshold = 0.5;
+Activism_Threshold = 0.1;
 %If Grievance - Net Risk > Activism_Threshold -> Agent is active
 
-Murder_threshold = 0.9;
-Murder_success_rate = 0.5;
-Murder_assasin_death_rate = 0.5;
+Murder_threshold =1;
+Murder_success_rate = 0.0;
+Murder_assasin_death_rate = 0.0;
 %If Grievance - Net Risk > Murder_threshold -> Agent kills Cops
 
-Vision_Min_Cops = 10;
-Vision_Max_Cops = 15;
-Vision_Min_Agent = 10;
-Vision_Max_Agent = 15;
+Vision_Min_Cops = 1;
+Vision_Max_Cops =3;
+Vision_Min_Agent = 1;
+Vision_Max_Agent = 3;
 
-Death = true;
-Agent_Death_Chance = 0.01;
+Death = false;
+Agent_Death_Chance = 0.0;
 Agent_Death_Legitimacy_Penalty = 0.02;
-Cop_Death_Chance = 0.005;
+Cop_Death_Chance = 0.00;
 Cop_Death_Legitimacy_Boost = 0.03;
 %Agents and Cops can die in Confrontations
 
-Important_Land = true;         
+Important_Land = false;         
 %Some spots of land are important
 ID = 210;
-Importance = 10;
+Importance = 0;
 ImportantFields{1} = Field(ID, Importance);
 
-Important_People = true;
-Important_Chance_Agents = 0.05;
+Important_People = false;
+Important_Chance_Agents = 0.0;
 Important_Effectiveness_Agents = 5;
-Important_Chance_Cops = 0.05;
+Important_Chance_Cops = 0.0;
 Important_Effectiveness_Cops = 5;
 %Some people are important
 %Important Agents count as "more" Agents, effectively making others rebell
 %Important Cops count as "more" Cops, effectively silencing protest.
 %Important People have extended Vision
 
-Defective_Cops = true;
-Legitimacy_Mod_Cop = 0.1;
-Legitimacy_Threshold_Stop = 0.3;
-Legitimacy_Threshold_Defect = 0.1;
+Defective_Cops = false;
+Legitimacy_Mod_Cop = 0.0;
+Legitimacy_Threshold_Stop = 0.0;
+Legitimacy_Threshold_Defect = 0.0;
 %If a Cop's view of the Legitimacy drops too low, he may stop arresting, or defect.
 
-Better_Legitimacy = true;
-Legitimacy_Mod = 0.05;
+Better_Legitimacy = false;
+Legitimacy_Mod = 0.0;
 %Agents all have a personal Legitimacy Modifier, which modifies the global
 %Legitimacy.
 
-Each_Round_Legitimacy_Change = -0.04;
+Each_Round_Legitimacy_Change = 0;
 
-Number_of_Frames = 100;
+Number_of_Frames =100;
 %Number of Rounds
 
-Plot_every_X_Frames = 20;
+Plot_every_X_Frames = 100;
 %Only plot some of the rounds (1=Plot every Round)
 
 k = 2.3;                
@@ -108,8 +108,11 @@ Colors_Activism = zeros(1, side*side+3);
 for i=1:1:side
     
     for j=1:1:side
+        
         x((i-1)*side + j) = i;
         y((i-1)*side + j) = j;
+        
+        
         
         if random('Uniform',0,1,1,1) > 1/(O_to_U_Ratio+1)
         
@@ -154,6 +157,25 @@ for i=1:1:side
     
 end
 
+for i=17:1:23
+    for j=17:1:23
+     V = floor(random('Uniform',Vision_Min_Cops,Vision_Max_Cops,1,1));
+                if Defective_Cops
+                    Leg = random('Uniform',-Legitimacy_Mod_Cop,Legitimacy_Mod_Cop,1,1);
+                else
+                    Leg = 0;
+                end
+                if random('Uniform',0,1,1,1) < Important_Chance_Cops
+                    E = Important_Effectiveness_Cops;
+                    V = V*Important_Effectiveness_Cops;
+                else
+                    E = 1;
+                end
+                Playfield{(i-1)*side + j} = Cop(V, Leg, E);
+    end
+end
+
+    
 %Dirty Hack for correct Colors
 x(side*side+1) = -5;
 x(side*side+2) = -5;
@@ -501,31 +523,31 @@ for h=1:Number_of_Frames
     %Provide Feedback
     h
 
-    if g == 0
-        
-        figx=figure(figurecounter);
-        figurecounter = figurecounter+1;
-        axes;
-        scatter(x, y, 150, Colors_Attitude, 's', 'filled');
-        legend([ 'Attitude Round ', num2str(h), 10, 'Dark Blue = Cops', 10, 'Light Blue = Empty', 10, 'Red = Agents, the darker the worse the Attitude', 10,10, 'Active Agents = ', num2str(Active_Agents), 10, 'Inactive Agents = ', num2str(Inactive_Agents), 10, 'Active Cops = ', num2str(Active_Cops)] ,'Location','SouthOutside');
-        axis([0 side+1 0 side+1]);
-
-        figx=figure(figurecounter);
-        figurecounter = figurecounter+1;
-        axes;
-        scatter(x, y, 150, Colors_Activism, 's', 'filled');
-        legend([ 'Activism Round ', num2str(h), 10, 'Dark Blue = Cops', 10, 'Light Blue = Empty', 10, 'Red = Active Agents', 10, 'Light Red = Inactive Agents', 10,10, 'Active Agents = ', num2str(Active_Agents), 10, 'Inactive Agents = ', num2str(Inactive_Agents), 10, 'Active Cops = ', num2str(Active_Cops)] ,'Location','SouthOutside');
-        axis([0 side+1 0 side+1]);
+   if g == 0
+ %       
+  %      figx=figure(figurecounter);
+   %     figurecounter = figurecounter+1;
+    %    axes;
+    %    scatter(x, y, 150, Colors_Attitude, 's', 'filled');
+     %   legend([ 'Attitude Round ', num2str(h), 10, 'Dark Blue = Cops', 10, 'Light Blue = Empty', 10, 'Red = Agents, the darker the worse the Attitude', 10,10, 'Active Agents = ', num2str(Active_Agents), 10, 'Inactive Agents = ', num2str(Inactive_Agents), 10, 'Active Cops = ', num2str(Active_Cops)] ,'Location','SouthOutside');
+      %  axis([0 side+1 0 side+1]);
+%
+ %       figx=figure(figurecounter);
+  %      figurecounter = figurecounter+1;
+   %     axes;
+    %    scatter(x, y, 150, Colors_Activism, 's', 'filled');
+    %    legend([ 'Activism Round ', num2str(h), 10, 'Dark Blue = Cops', 10, 'Light Blue = Empty', 10, 'Red = Active Agents', 10, 'Light Red = Inactive Agents', 10,10, 'Active Agents = ', num2str(Active_Agents), 10, 'Inactive Agents = ', num2str(Inactive_Agents), 10, 'Active Cops = ', num2str(Active_Cops)] ,'Location','SouthOutside');
+    %    axis([0 side+1 0 side+1]);
         %Movie(:,i)=getframe(fig1,winsize); 
         
         if h == 1 && Plot_every_X_Frames > 1
-            g=Plot_every_X_Frames-1;
+    %        g=Plot_every_X_Frames-1;
         else
-            g=Plot_every_X_Frames;
+   %         g=Plot_every_X_Frames;
         end
     end
     
-    g=g-1;
+   % g=g-1;
 
 end
 
@@ -547,35 +569,35 @@ plot(1:Number_of_Frames, Prison_Population_Array);
 axis([1 Number_of_Frames 0 side^2*(1-1/(O_to_U_Ratio+1))]);
 legend('Imprisoned Agents' ,'Location','SouthOutside');
 
-figx=figure(figurecounter);
-figurecounter = figurecounter+1;
-plot(1:Number_of_Frames, Active_Cops_Array);
-axis([1 Number_of_Frames 0 side^2*(1-1/(O_to_U_Ratio+1))]);
-legend('Active Cops' ,'Location','SouthOutside');
+%figx=figure(figurecounter);
+%figurecounter = figurecounter+1;
+%plot(1:Number_of_Frames, Active_Cops_Array);
+%axis([1 Number_of_Frames 0 side^2*(1-1/(O_to_U_Ratio+1))]);
+%legend('Active Cops' ,'Location','SouthOutside');
 
-figx=figure(figurecounter);
-figurecounter = figurecounter+1;
-plot(1:Number_of_Frames, Inactive_Cops_Array);
-axis([1 Number_of_Frames 0 side^2*(1-1/(O_to_U_Ratio+1))]);
-legend('Inactive Cops' ,'Location','SouthOutside');
+%figx=figure(figurecounter);
+%figurecounter = figurecounter+1;
+%plot(1:Number_of_Frames, Inactive_Cops_Array);
+%axis([1 Number_of_Frames 0 side^2*(1-1/(O_to_U_Ratio+1))]);
+%legend('Inactive Cops' ,'Location','SouthOutside');
 
-figx=figure(figurecounter);
-figurecounter = figurecounter+1;
-plot(1:Number_of_Frames, Defected_Cops_Array);
-axis([1 Number_of_Frames 0 side^2*(1-1/(O_to_U_Ratio+1))/25]);
-legend('Defected Cops' ,'Location','SouthOutside');
+%figx=figure(figurecounter);
+%figurecounter = figurecounter+1;
+%plot(1:Number_of_Frames, Defected_Cops_Array);
+%axis([1 Number_of_Frames 0 side^2*(1-1/(O_to_U_Ratio+1))/25]);
+%legend('Defected Cops' ,'Location','SouthOutside');
 
-figx=figure(figurecounter);
-figurecounter = figurecounter+1;
-plot(1:Number_of_Frames, Murdered_Cops_Array);
-axis([1 Number_of_Frames 0 side^2*(1-1/(O_to_U_Ratio+1))/100]);
-legend('Murdered Cops' ,'Location','SouthOutside');
+%figx=figure(figurecounter);
+%figurecounter = figurecounter+1;
+%plot(1:Number_of_Frames, Murdered_Cops_Array);
+%axis([1 Number_of_Frames 0 side^2*(1-1/(O_to_U_Ratio+1))/100]);
+%legend('Murdered Cops' ,'Location','SouthOutside');
 
-figx=figure(figurecounter);
-figurecounter = figurecounter+1;
-plot(1:Number_of_Frames, Legitimacy_Array);
-axis([1 Number_of_Frames 0 1]);
-legend('Legitimacy' ,'Location','SouthOutside');
+%figx=figure(figurecounter);
+%figurecounter = figurecounter+1;
+%plot(1:Number_of_Frames, Legitimacy_Array);
+%axis([1 Number_of_Frames 0 1]);
+%legend('Legitimacy' ,'Location','SouthOutside');
 
 
 %{
