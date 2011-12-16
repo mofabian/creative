@@ -282,7 +282,7 @@ In case the number of frames ishigher than five, one might want to consider notp
 
 %USE THE FUNDAMENTAL QUESTIONS POSED IN THE PROPOSAL
 
-\subsection
+\subsection{Comparison of Epstein Model with our Model}
 
 \includegraphics{Picture1.png}
 
@@ -303,18 +303,18 @@ All the other variables have been set to 0.\newline
 \includegraphics{Picture2.png}\newline
 \includegraphics{Picture3.png}\newline
 \includegraphics{Picture4.png}\newline
-\includegraphics{Picture5.png}\newline
+\includegraphics{Picture5.png}\newpage
 
 In the next graph we plot the number of active agents in every round. There is a sudden drop in the first couple of rounds: In the first round there are 116 active agents. But later the number of active agents is never larger than 60. Also can be observed that the number of active agents and the number of imprisoned agents affect each other. If the number of active agents is high the number of prisoner will probably be low and if only a few agents are active the prisoner will probably be full and vice versa.\newline
 
 \includegraphics{Picture6.png}\newline
 \includegraphics{Picture7.png}
 
-Salami Tactics of Corruption\newline
+\subsubsection{Salami Tactics of Corruption}
 As in the Epstein model we studied the influence of a Change in legitimacy. We looked at two cases: A sudden drop in legitimacy and a smoothly decay in legitimacy. Booth cases happened in the real world. A very good example for a sudden legitimacy drop is Greece. After a protester was shot during a demonstration the public opinion suddenly dropped and the demonstration became even bigger.  An example of a smoothly decay is Egypt. The system seemed to by quiet stable but the lack of a better future for a whole generation steadily decreased the legitimacy.\newline
 
-Sudden drop\newline
-We started with a legitimacy of 0.9.  Than in round 10 we reduced the legitimacy by -0.3.  This leads to a sudden increase of the number of active agents. Since the central force is very strong (number of Cop/agents =0.2) the number of active agents declines again and the prison gets full.\newline
+\subsubsection{Sudden drop}
+We started with a legitimacy of 0.9.  Than in round 10 we reduced the legitimacy by -0.3.  This leads to a sudden increase of the number of active agents. Since the central force is very strong (number of Cop/agents =0.2) the number of active agents declines again and the prison gets full.
 
 \includegraphics{Picture8.png}
 
@@ -325,7 +325,7 @@ Jailterm =(8,25)\newline
 Activism\_Treshold=0.1\newline
 Vision=7
 
-Linear decrease\newline
+\subsubsection{Linear decrease}
 In this case all the parameters are exactly the same as above. The only difference is the Legitimacy. Instead of a sudden drop we reduced the legitimacy round by -0.6/200. In this case we don’t observe a peak in the number of active agents. Since the central force is strong and the prison terms rather long the cops can handle the situation.
 
 \includegraphics{Picture9.png}
@@ -337,18 +337,18 @@ Jailterm = (8, 25)\newline
 Activism\_Treshold=0.1\newline
 Vision=7
 
-Influence of Cop Distribution\newline
+\subsection{Influence of Cop Distribution}
 We wondered what would change if we would let star the cop in the middle instead of randomly distributed and how does the influence of the starting position of the cops depends on their view.\newline
 The idea is the following: In the beginning 49 cops are stationed in the middle of the field. Then they spread out and suppress the demonstrations. The question is now: How many rounds does it takes until the cops starting in the middle are as successful as the ones starting randomly.\newline
-The following plot shows the field in the first round and in the 100 round. \newline
-Centre\newline
-\includegraphics{Picture10.png}\newline
-Random\newline
+The following plot shows the field in the first round and in the 100 round. \newline\newline
+Centre\newline\newline
+\includegraphics{Picture10.png}\newpage
+Random\newline\newline
 \includegraphics{Picture11.png}\newline
 
-Centre\newline
-\includegraphics{Picture12.png}\newline
-Random\newline
+Centre\newline\newline
+\includegraphics{Picture12.png}\newpage
+Random\newline\newline
 \includegraphics{Picture13.png}\newline
 
 
@@ -370,7 +370,7 @@ Random\newline
 
 To get a more accurate result we took the mean and standard deviation of the number of active agents and the number of active agents over 30 runs of the simulations. We did that for 3 different tips of view ranges:\newline\newline
 
-View randomly distributed in (1,3)\newline\newline
+\subsubsection{View randomly distributed in (1,3)}
 
 \includegraphics{Picture16.png}
 
@@ -380,7 +380,7 @@ After 60 rounds the cops starting in the middle are still clearly less successfu
 
 The cops on the middle need 60 rounds until they finally have imprisoned as many agents as the randomly distributed cops.\newline\newline
 
-View randomly distributed in  (3-5)\newline\newline
+\subsubsection{View randomly distributed in  (3-5)}
 
 \includegraphics{Picture18.png}
 
@@ -390,7 +390,7 @@ In this case it takes the cops starting in the middle about 25 rounds to get as 
 
 The curve in the random case after round 5 looks like the curve in the centre case after round 30. This holds also for the graph of active agents.\newline\newline
 
-View 5-7\newline\newline
+\subsubsection{View randomly distributed in  (5-7)}
 
 \includegraphics{Picture20.png}
 
@@ -398,13 +398,13 @@ In this case the curves in the centre case shifted by about 5 rounds to the righ
 
 It is also very interesting how the whole system behaves: After a number of rounds depending on view, population density and cop density  the average of the simulations gets constant.  \newline\newline
 
-Not for all input variables the outcome of the simulation is reasonably.\newline\newline
+\subsection{Problems}
 
-View\newline
+\subsubsection{View}
 We get a problem with our simulation if the view is very low and in the same time the population density is high. An Example for that are the plots of the field in the chapter Influence of Cop Distribution.\newline
 There we have a view in (1,3) and a ratio of 0.7 of occupied to unoccupied fields. After 100 rounds the people aren’t randomly distributed anymore. They sort of glue together in the corner. Since the view is small most of the people in this accumulation can’t move at all.\newline\newline
 
-Movement\newline
+\subsubsection{Movement}
 Our agents and cops can only move left, right, up and down. This seems to be not very realistic. If only one cop is in a particular region the situation can be very unrealistic. But if many agents are in a particular area they can cover the whole area with their movement and the situation is similar to the case there the cops can move in all directions. So always place enough cops in the field. The same also holds for agents. Enough means at least more than 40.
 
 \newpage
