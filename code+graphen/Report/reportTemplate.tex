@@ -1,0 +1,193 @@
+\documentclass[11pt]{article}
+\usepackage{geometry}                
+\geometry{letterpaper}                   
+
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{natbib}
+\usepackage{amssymb, amsmath}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+%\title{Title}
+%\author{Name 1, Name 2}
+%\date{date} 
+
+\begin{document}
+
+
+\input{cover}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\section*{Agreement for free-download}
+\bigskip
+
+
+\bigskip
+
+
+\large We hereby agree to make our source code for this project freely available for download from the web pages of the SOMS chair. Furthermore, we assure that all source code is written by ourselves and is not violating any copyright restrictions.
+
+\begin{center}
+
+\bigskip
+
+
+\bigskip
+
+
+\begin{tabular}{@{}p{3.3cm}@{}p{6cm}@{}@{}p{6cm}@{}}
+\begin{minipage}{3cm}
+
+\end{minipage}
+&
+\begin{minipage}{6cm}
+\vspace{2mm} \large Name 1
+
+ \vspace{\baselineskip}
+
+\end{minipage}
+&
+\begin{minipage}{6cm}
+
+\large Name 2
+
+\end{minipage}
+\end{tabular}
+
+
+\end{center}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+% IMPORTANT
+% you MUST include the ETH declaration of originality here; it is available for download on the course website or at http://www.ethz.ch/faculty/exams/plagiarism/index_EN; it can be printed as pdf and should be filled out in handwriting
+
+
+%%%%%%%%%% Table of content %%%%%%%%%%%%%%%%%
+
+\tableofcontents
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\section{Abstract}
+
+\section{Individual contributions}
+
+\section{Introduction and Motivations}
+
+\section{Description of the Model}
+
+\section{Implementation}
+
+The implementation of our model brings many features, as well as some added complexity.\newline
+A short overview about the core functionality:\newline
+
+\begin{itemize}
+\item Problem Generation\newline
+According to user-set constants, the playfield is filled with Agents and Cops. These players are generated with alle the required functionality to later perform their actions. Agents, for example, are already equipped with Hardship.
+\item Loop through steps\newline
+Since the problem is now specified, we can loop one step at a time, until we reach some final state. In each step, there are a few things that must be done:
+\begin{itemize}
+\item Reset moves\newline
+Every Cop and Agent can move exactly once per step, so we must ensure that they can now move properly.
+\item Release imprisoned\newline
+All the imprisoned Agents have their sentence reduced by one. All Agents with a sentence of zero or less are set free. They are randomly put onto empty fields on the playfield.
+\item Move Cops and Agents\newline
+Agents scout out the empty fields in their vision, and choose one at random. In case there are no empty fields, they stay put.\newline
+Cops scout for active Agents, as well as empty fields. If they spot an Agent, they move to the Agent's field and arrest him. Should no Agent be inside the Cop's vision, they randomly move to an empty field. In case they can'tfind an Agent or an empty field, they stay put.
+\item Set status of Agents\newline
+With all the Agents and Cops moved, the Agents need to re-evaluate whether they want to be active. Their activeness is set for the next round, as well as for display purposes. Cops as well as empty squares are also saved for display.
+\item Display current model\newline
+With the saved values from the step above, a graph can be plotted, showing all Agents and Cops, as well as some info about them.
+\end{itemize}
+\item Display summarizing plots\newline
+At the very end, plot some graphs of the most important values during the computation. Current graphs include active Agents, inactive Agents, imprisoned Agents, active Cops, Legitimacy.
+\end{itemize}
+
+This core model has been enhanced by many tweaks and options, listed here:
+\begin{itemize}
+\item Size\newline
+The size of the playfield can now be changed.
+
+\item Occupied to Unoccupied Ratio\newline     
+This ratio regulates Occupied Spaces vs. Unoccupied Spaces. In the original paper, the author started with a full playfield, but that might not always be desired.
+
+\item Cop to Agent Ratio\newline    
+This ratio sets the global amount of Cops vs. Agents. Especially useful when simulating low/heavy police presence with varying playfield size.
+
+\item Jailterm Min/Max\newline          
+Minimum and Maximum amout of steps an Agent will spend in jail if arrested.
+
+\item Jail sentence\newline
+In the original paper, the jail sentence was chosen uniformly from zero to some maximum. In reality, jail sentences are not chosen uniformly, and so this function can be altered in whatever way desired. It uses the Jailterm Min/Max discussed above.
+
+\item Jail Aggreviance\newline
+In the original paper, released Agents left the jail just as aggrieved as when they were captured. Modeling different criminal justice systems is nearly impossible that way.Therefor, we implemented this variable. If Agents are badly treated in jail, they now will be released in an angry state.
+
+\item Activism Threshold\newline
+The attitude of an agent against the regime is computed by subtracting the net risk of arrest for that agent from his personal grievance. But what attitude is needed for an Agent to actually go active? In the original paper, this was assumed to be zero, but we implemented a variable to model different people and their resistance to regimes.
+
+\item Murder Threshold\newline
+In order to model militant uprisings we needed some functionality for Agents to actually kill or at least attack Cops. This murder threshold is the outcome. Normally much higher than the activism threshold, if fulfilled, the Agent will no longer protest but instead go and hunt down Cops.
+
+\item Murder success rate\newline
+Depending on the tools available to murdering Agents, they may or may not succeed in killing a cop. This is used to differentiate between countries with easy/difficult access to weapons for civilians.
+\item Murder assasin death rate\newline
+Sometimes Agents might get killed while trying to kill a Cop. If the Cops are taken by suprise the revolution might go much more smoothly than if all Cops are heavily armed and have orders to kill every attacker.
+
+\item Vision Min/Max\newline
+These variables, separate for Agents and Cops, govern the visible field. In every step, players can only gauge what happens in their fieldof vision, and act upon it. Large fields of vision will allow Cops to become more effective, while Agents can better interpret their chances of getting arrested.
+
+\item Death\newline
+Whenever a Cop tries to arrest an Agent, either one of them might die. As seen in 2008 in Greece, the death of Alexandros Grigoropoulos sparked violence. So whenever an Agent dies while being arrested, the Legitimacy of the regime suffers. To somewhat even out the effect, in case a Cop dies, the Legitimacy receives a boost. These variables are especially useful when gauging if a regime should use many Cops to quickly crack down on Agents, or whether they should use a moderate force to slowly curb the unrest.
+
+\item Important Land\newline
+In the original paper, Cops as well as Agents wander pretty much randomly. When modeling Egypt's revolution in and around Tahir square, the idea of randomly moving doesn't cut it. Both Agents and Cops marched to one important place, and then clashed there. To model such an important point, this feature was added.
+
+\item Important people\newline
+Nerly every revolution had it's heroes. While they were not so powerful by themselves, they would often tip the balance in their favor. We modeled important people with an extended Vision, as well as enhanced effectiveness: When an Agent tries to find out his chances of arrest, he will measure a low chance when standing next to an important Agent, but a very high chance when seeing an important Cop.
+
+\item Defective Cops\newline
+Normally, Cops won't defect to the Agents side. In special cases, such as Egypt and Tunesia, the Cops decided to join the Agents since the Legitimacy of the regime had fallen too low. We modeled this using two variables. Should the Legitimacy fall below some threshold, Cops will stop arresting Agents. If the Legitimacy falls further, they will abandon their post and join the Agents.
+
+\item Better Legitimacy\newline
+Legitimacy is normally not globally percieved. Some people will always agree with a certain regime, while others will always disagree. To model such cases, we assigned every Agent and Cop his own impression of the regime. This allows for some more believable outcomes, such as Agents with low Hardship but a distinct hatred of the regime going active, as well as Agents with high Hardship keeping silent because they love the regime.
+
+\item Legitimacy Change each step\newline
+In certain cases a regime might loose supporters as time passes. For example the people of Egypt are pressing for reforms, and the longer they have to wait, the less satisfied they will become with the regime. This variable can be used to model such cases, and help decide when the breaking point is reached, by which a reform needs to be introduced, or the protests will start again.
+
+\item Number of Frames\newline
+This variable does not have any influence on the computation itself,but governs how many steps are computed and archived.
+
+\item Plot every X Frames\newline
+In case the number of frames ishigher than five, one might want to consider notplotting each and every step, and this variable governs that.
+
+\end{itemize}
+
+\section{Simulation Results and Discussion}
+
+\section{Summary and Outlook}
+
+\section{References}
+
+
+
+
+
+
+\end{document}  
+
+
+
+ 
