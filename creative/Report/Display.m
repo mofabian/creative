@@ -61,20 +61,23 @@ Important_Effectiveness_Agents = 5;
 Important_Chance_Cops = 0.0;
 Important_Effectiveness_Cops = 5;
 %Some people are important
-%Important Agents count as "more" Agents, effectively making others rebell
-%Important Cops count as "more" Cops, effectively silencing protest.
+%Important Agents count as "more" Agents, effectively making
+%others rebell
+%Important Cops count as "more" Cops, effectively silencing 
+%protest.
 %Important People have extended Vision
 
 Defective_Cops = false;
 Legitimacy_Mod_Cop = 0.0;
 Legitimacy_Threshold_Stop = 0.0;
 Legitimacy_Threshold_Defect = 0.0;
-%If a Cop's view of the Legitimacy drops too low, he may stop arresting, or defect.
+%If a Cop's view of the Legitimacy drops too low, he may 
+%stop arresting, or defect.
 
 Better_Legitimacy = false;
 Legitimacy_Mod = 0.0;
-%Agents all have a personal Legitimacy Modifier, which modifies the global
-%Legitimacy.
+%Agents all have a personal Legitimacy Modifier, which modifies 
+%the global Legitimacy.
 
 Each_Round_Legitimacy_Change = 0;
 
@@ -102,8 +105,6 @@ k = 2.3;
 x = zeros(1, side*side+3);
 y = zeros(1, side*side+3);
 
-%Playfield;                 %Fuck you, MATLAB
-%Prison;                    %Fuck you, MATLAB
 Prison{1} = Empty();
 
 Colors_Attitude = zeros(1, side*side+3);
@@ -122,13 +123,16 @@ for i=1:1:side
         
             if random('Uniform',0,1,1,1) > 1/(C_to_A_Ratio+1)
                 %Cop
-                V = floor(random('Uniform',Vision_Min_Cops,Vision_Max_Cops,1,1));
+                V = floor(random('Uniform',Vision_Min_Cops,
+                  Vision_Max_Cops,1,1));
                 if Defective_Cops
-                    Leg = random('Uniform',-Legitimacy_Mod_Cop,Legitimacy_Mod_Cop,1,1);
+                    Leg = random('Uniform',-Legitimacy_Mod_Cop,
+                      Legitimacy_Mod_Cop,1,1);
                 else
                     Leg = 0;
                 end
-                if random('Uniform',0,1,1,1) < Important_Chance_Cops
+                if random('Uniform',0,1,1,1) < 
+                  Important_Chance_Cops
                     E = Important_Effectiveness_Cops;
                     V = V*Important_Effectiveness_Cops;
                 else
@@ -139,13 +143,16 @@ for i=1:1:side
                 %Agent
                 H = random('Uniform',0,1,1,1);
                 R = random('Uniform',0,1,1,1);
-                V = floor(random('Uniform',Vision_Min_Agent,Vision_Max_Agent,1,1));
+                V = floor(random('Uniform',Vision_Min_Agent,
+                  Vision_Max_Agent,1,1));
                 if Better_Legitimacy
-                    Leg = random('Uniform',-Legitimacy_Mod,Legitimacy_Mod,1,1);
+                    Leg = random('Uniform',-Legitimacy_Mod,
+                      Legitimacy_Mod,1,1);
                 else
                     Leg = 0;
                 end
-                if random('Uniform',0,1,1,1) < Important_Chance_Agents
+                if random('Uniform',0,1,1,1) < 
+                  Important_Chance_Agents
                     E = Important_Effectiveness_Agents;
                     V = V*Important_Effectiveness_Agents;
                 else
@@ -176,7 +183,6 @@ Colors_Activism(side*side+1) = -5;
 Colors_Activism(side*side+2) = -3;
 Colors_Activism(side*side+3) = 1;
     %   Then, wesolve it!
-    %   OY, KEEP HANDS AWAY FROM CODE!
 
 %fig1=figure(1);
 %winsize = get(fig1,'Position');
@@ -203,8 +209,9 @@ for h=1:Number_of_Frames
     
     %legitimicy-drop
     
-        if (One_Time_Change && h==round_for_One_Time_Legitimacy_Change)
-        L =L + One_Time_Legitimacy_Change;
+        if (One_Time_Change && 
+          h==round_for_One_Time_Legitimacy_Change)
+        		L =L + One_Time_Legitimacy_Change;
         end
     
     
@@ -213,7 +220,8 @@ for h=1:Number_of_Frames
     for j=1:1:side*side
         A = Playfield{j};
         
-        if strcmp(A.Get_Type(), 'Agent') || strcmp(A.Get_Type(), 'Cop')
+        if strcmp(A.Get_Type(), 'Agent') || 
+        	strcmp(A.Get_Type(), 'Cop')
         
             A = A.Set_Move(true);
 
@@ -236,7 +244,8 @@ for h=1:Number_of_Frames
 
             if A.Jailtime() <= 0
                 A = A.Set_Jailtime(0);
-                A = A.Set_Hardship(max(0, min(1, A.Hardship + Aggreviance())));
+                A = A.Set_Hardship(max(0, min(1, A.Hardship + 
+                	Aggreviance())));
 
                 EmptyFields = [];
 
@@ -247,9 +256,11 @@ for h=1:Number_of_Frames
                     end
                 end
                 
-                EmptyFields = EmptyFields( randperm(length(EmptyFields)) );
+                EmptyFields = EmptyFields( randperm(
+                	length(EmptyFields)) );
 
-                Release = select_field( EmptyFields, ImportantFields, side );
+                Release = select_field( EmptyFields, 
+                	ImportantFields, side );
                 %AllReleases(length(AllReleases)+1) = Release;
                 
                 Playfield{Release} = A;        %Actual Move
@@ -275,145 +286,231 @@ for h=1:Number_of_Frames
 
                 A = Playfield{(i-1)*side + j};
                 
-                if Defective_Cops && strcmp(A.Get_Type(), 'Cop') && A.Moveable() && L + A.Pers_Legitimacy < Legitimacy_Threshold_Defect
+                if Defective_Cops && strcmp(A.Get_Type(), 'Cop') 
+                	&& A.Moveable() && L + A.Pers_Legitimacy < 
+                	Legitimacy_Threshold_Defect
                     %Check if Cop,and if he defects now
                     H = random('Uniform',0,1,1,1);
                     R = random('Uniform',0,1,1,1);
-                    A = Agent(H, R, A.Vision, A.Pers_Legitimacy, A.Effectiveness);
+                    A = Agent(H, R, A.Vision, A.Pers_Legitimacy, 
+                    	A.Effectiveness);
                     Playfield{(i-1)*side + j} =  A;
                     
-                    Defected_Cops_Array(h) = Defected_Cops_Array(h)+1;
+                    Defected_Cops_Array(h) = 
+                    	Defected_Cops_Array(h)+1;
                 end
 
-                if (strcmp(A.Get_Type(), 'Agent') || strcmp(A.Get_Type(), 'Cop')) && A.Moveable()
+                if (strcmp(A.Get_Type(), 'Agent') || 
+                	strcmp(A.Get_Type(), 'Cop')) && A.Moveable()
                     
                     %Move to unoccupied space, check if active
                     
                     AgentFields = [];
 
-                    if strcmp(A.Get_Type(), 'Cop') && (L + A.Pers_Legitimacy > Legitimacy_Threshold_Stop || Defective_Cops == false) || strcmp(A.Get_Type(), 'Agent') && A.Grievance(L) > Murder_threshold
-                        %We have an active Cop, search for active Agents
-                        %for Arrest
+                    if strcmp(A.Get_Type(), 'Cop') && (L + 
+                    	A.Pers_Legitimacy > 
+                    	Legitimacy_Threshold_Stop || 
+                    	Defective_Cops == false) || 
+                    	strcmp(A.Get_Type(), 'Agent') && 
+                    	A.Grievance(L) > Murder_threshold
+                        %We have an active Cop, search for 
+                        %active Agents for Arrest
                         for k=1:1:A.Vision
                             % Get all agent Places
                             
-                            if i > k && strcmp(Playfield{(i-1-k)*side + j}.Get_Type(), 'Agent') && Playfield{(i-1-k)*side + j}.Is_Active
-                                AgentFields(length(AgentFields)+1) = (i-1-k)*side + j;
+                            if i > k && strcmp(
+                            	Playfield{(i-1-k)*side + j}.
+                            	Get_Type(), 'Agent') && 
+                            	Playfield{(i-1-k)*side + j}.Is_Active
+                                AgentFields(length(AgentFields)+1)
+                                 = (i-1-k)*side + j;
                             end
-                            if i <= side-k && strcmp(Playfield{(i-1+k)*side + j}.Get_Type(), 'Agent') && Playfield{(i-1+k)*side + j}.Is_Active
-                                AgentFields(length(AgentFields)+1) = (i-1+k)*side + j;
+                            if i <= side-k && strcmp(
+                            	Playfield{(i-1+k)*side + j}.
+                            	Get_Type(), 'Agent') && 
+                            	Playfield{(i-1+k)*side + j}.
+                            	Is_Active
+                                AgentFields(length(AgentFields)+1)
+                                 = (i-1+k)*side + j;
                             end
-                            if j > k && strcmp(Playfield{(i-1)*side + j-k}.Get_Type(), 'Agent') && Playfield{(i-1)*side + j-k}.Is_Active
-                                AgentFields(length(AgentFields)+1) = (i-1)*side + j-k;
+                            if j > k && strcmp(
+                            	Playfield{(i-1)*side + j-k}.
+                            	Get_Type(), 'Agent') && 
+                            	Playfield{(i-1)*side + j-k}.
+                            	Is_Active
+                                AgentFields(length(AgentFields)+1)
+                                 = (i-1)*side + j-k;
                             end
-                            if j <= side-k && strcmp(Playfield{(i-1)*side + j+k}.Get_Type(), 'Agent') && Playfield{(i-1)*side + j+k}.Is_Active
-                                AgentFields(length(AgentFields)+1) = (i-1)*side + j+k;
+                            if j <= side-k && strcmp(
+                            	Playfield{(i-1)*side + j+k}.
+                            	Get_Type(), 'Agent') && 
+                            	Playfield{(i-1)*side + j+k}.
+                            	Is_Active
+                                AgentFields(length(AgentFields)+1)
+                                 = (i-1)*side + j+k;
                             end
                         end
-                        AgentFields = AgentFields( randperm(length(AgentFields)) );
+                        AgentFields = AgentFields( randperm(
+                        	length(AgentFields)) );
                     end
                     
                     EmptyFields = [];
 
-                    if strcmp(A.Get_Type(), 'Agent') || (strcmp(A.Get_Type(), 'Cop') && length(AgentFields) == 0)
-                        %We have an Agent or a Cop who can't find Agents to
-                        %Arrest -> wander aimlessly
+                    if strcmp(A.Get_Type(), 'Agent') || 
+                    	(strcmp(A.Get_Type(), 'Cop') && 
+                    	length(AgentFields) == 0)
+                        %We have an Agent or a Cop who can't find 
+                        %Agents to Arrest -> wander aimlessly
                         for k=1:1:A.Vision
                             % Get all Empty Places
-                            if i > k && strcmp(Playfield{(i-1-k)*side + j}.Get_Type(), 'Empty')
-                                EmptyFields(length(EmptyFields)+1) = (i-1-k)*side + j;
+                            if i > k && strcmp(
+                            	Playfield{(i-1-k)*side + j}.
+                            	Get_Type(), 'Empty')
+                                EmptyFields(length(EmptyFields)+1)
+                                  = (i-1-k)*side + j;
                             end
-                            if i <= side-k && strcmp(Playfield{(i-1+k)*side + j}.Get_Type(), 'Empty')
-                                EmptyFields(length(EmptyFields)+1) = (i-1+k)*side + j;
+                            if i <= side-k && strcmp(
+                            	Playfield{(i-1+k)*side + j}.
+                            	Get_Type(), 'Empty')
+                                EmptyFields(length(EmptyFields)+1)
+                                  = (i-1+k)*side + j;
                             end
-                            if j > k && strcmp(Playfield{(i-1)*side + j-k}.Get_Type(), 'Empty')
-                                EmptyFields(length(EmptyFields)+1) = (i-1)*side + j-k;
+                            if j > k && strcmp(
+                            	Playfield{(i-1)*side + j-k}.
+                            	Get_Type(), 'Empty')
+                                EmptyFields(length(EmptyFields)+1)
+                                  = (i-1)*side + j-k;
                             end
-                            if j <= side-k && strcmp(Playfield{(i-1)*side + j+k}.Get_Type(), 'Empty')
-                                EmptyFields(length(EmptyFields)+1) = (i-1)*side + j+k;
+                            if j <= side-k && strcmp(
+                            	Playfield{(i-1)*side + j+k}.
+                            	Get_Type(), 'Empty')
+                                EmptyFields(length(EmptyFields)+1)
+                                  = (i-1)*side + j+k;
                             end
                         end
-                        EmptyFields = EmptyFields( randperm(length(EmptyFields)) );
+                        EmptyFields = EmptyFields( randperm(
+                        	length(EmptyFields)) );
                     end                
                                         
                     CopFields = [];
 
-                    if strcmp(A.Get_Type(), 'Agent') && A.Grievance(L) > Murder_threshold
-                        %We have an Agent that is ready to kill, search
-                        %Assassination targets
+                    if strcmp(A.Get_Type(), 'Agent') && 
+                    	A.Grievance(L) > Murder_threshold
+                        %We have an Agent that is ready to kill, 
+                        %search Assassination targets
                         for k=1:1:A.Vision
                             % Get all Empty Places
-                            if i > k && strcmp(Playfield{(i-1-k)*side + j}.Get_Type(), 'Cop')
-                                CopFields(length(CopFields)+1) = (i-1-k)*side + j;
+                            if i > k && strcmp(
+                            	Playfield{(i-1-k)*side + j}.
+                            	Get_Type(), 'Cop')
+                                CopFields(length(CopFields)+1)
+                                  = (i-1-k)*side + j;
                             end
-                            if i <= side-k && strcmp(Playfield{(i-1+k)*side + j}.Get_Type(), 'Cop')
-                                CopFields(length(CopFields)+1) = (i-1+k)*side + j;
+                            if i <= side-k && strcmp(
+                            	Playfield{(i-1+k)*side + j}.
+                            	Get_Type(), 'Cop')
+                                CopFields(length(CopFields)+1)
+                                  = (i-1+k)*side + j;
                             end
-                            if j > k && strcmp(Playfield{(i-1)*side + j-k}.Get_Type(), 'Cop')
-                                CopFields(length(CopFields)+1) = (i-1)*side + j-k;
+                            if j > k && strcmp(
+                            	Playfield{(i-1)*side + j-k}.
+                            	Get_Type(), 'Cop')
+                                CopFields(length(CopFields)+1)
+                                  = (i-1)*side + j-k;
                             end
-                            if j <= side-k && strcmp(Playfield{(i-1)*side + j+k}.Get_Type(), 'Cop')
-                                CopFields(length(CopFields)+1) = (i-1)*side + j+k;
+                            if j <= side-k && strcmp(
+                            	Playfield{(i-1)*side + j+k}.
+                            	Get_Type(), 'Cop')
+                                CopFields(length(CopFields)+1)
+                                  = (i-1)*side + j+k;
                             end
                         end
                     
-                        CopFields = CopFields( randperm(length(CopFields)) );                    
+                        CopFields = CopFields( randperm(
+                        	length(CopFields)) );                    
                     end
                     
-                    if strcmp(A.Get_Type(), 'Cop') && length(AgentFields) >= 1
+                    if strcmp(A.Get_Type(), 'Cop') && 
+                    	length(AgentFields) >= 1
                         %Our Cop has found some Agents to Arrest
-                        if random('Uniform',0,1,1,1) < Agent_Death_Chance
-                            %HE tried to arrest an Agent, but the Agent
-                            %died.
+                        if random('Uniform',0,1,1,1) < 
+                        	Agent_Death_Chance
+                            %HE tried to arrest an Agent, but the 
+                            %Agent died.
                             L = L - Agent_Death_Legitimacy_Penalty;
-                            Arrest = select_field(AgentFields, ImportantFields, side );
+                            Arrest = select_field(AgentFields, 
+                            	ImportantFields, side );
 
                             A = A.Set_Move(false);
 
                             Playfield{(i-1)*side + j} = Empty();
-                            Playfield{Arrest} = A;                        %Free Cell
-                        elseif random('Uniform',0,1,1,1) < Cop_Death_Chance
-                            %He tried to arrest an Agent,but the Cop died.
+                            Playfield{Arrest} = A;                        
+                            %Free Cell
+                        elseif random('Uniform',0,1,1,1) < 
+                        	Cop_Death_Chance
+                            %He tried to arrest an Agent,but the 
+                            %Cop died.
                             L = L + Cop_Death_Legitimacy_Boost;
                             Playfield{(i-1)*side + j} = Empty();
                         else
                             %Arrest successful
-                            Arrest = select_field( AgentFields, ImportantFields, side );
+                            Arrest = select_field( AgentFields, 
+                            	ImportantFields, side );
                             ArrestedAgent = Playfield{Arrest};
-                            ArrestedAgent = ArrestedAgent.Set_Jailtime(Jailsentence());   
-                            Prison{length(Prison)+1} = ArrestedAgent;           %Jail
+                            ArrestedAgent = ArrestedAgent.
+                            	Set_Jailtime(Jailsentence());   
+                            Prison{length(Prison)+1} = 
+                            	ArrestedAgent;
+                            %Jail
 
                             A = A.Set_Move(false);
 
                             Playfield{(i-1)*side + j} = Empty();
-                            Playfield{Arrest} = A;                        %Free Cell
+                            Playfield{Arrest} = A;
+                            %Free Cell
                         end
                         
-                        %AllCopMoves(length(AllCopMoves)+1) = Arrest;
+                        %AllCopMoves(length(AllCopMoves)+1) = 
+                        %Arrest;
 
-                    elseif length(CopFields) >= 1 && A.Grievance(L) - A.Net_Risk(A.Chance_of_Arrest(k, length(CopFields), length(AgentFields)), Jailterm_Max, Better_Deterrent_of_Jailtime) > Murder_threshold && random('Uniform',0,1,1,1) < Murder_success_rate
+                    elseif length(CopFields) >= 1 && A.Grievance(L)
+                      - A.Net_Risk(A.Chance_of_Arrest(k, 
+                      length(CopFields), length(AgentFields)), 
+                      Jailterm_Max, Better_Deterrent_of_Jailtime) > 
+                      Murder_threshold && random('Uniform',0,1,1,1) 
+                      < Murder_success_rate
                         %Our Agent successfully murders a Cop
-                        GoTo = select_field( CopFields, ImportantFields, side );
+                        GoTo = select_field( CopFields, 
+                        	ImportantFields, side );
 
                         A = A.Set_Move(false);
 
-                        %AllAgentMoves(length(AllAgentMoves)+1) = GoTo;
+                        %AllAgentMoves(length(AllAgentMoves)+1) = 
+                        %GoTo;
 
                         Playfield{(i-1)*side + j} = Empty();
-                        Playfield{GoTo} = A;        %Actual Move
+                        Playfield{GoTo} = A;        
+                        %Actual Move
                         
-                        Murdered_Cops_Array(h) = Murdered_Cops_Array(h)+1;
-                    elseif length(CopFields) >= 1 && random('Uniform',0,1,1,1) > Murder_success_rate && random('Uniform',0,1,1,1) < Murder_assasin_death_rate
-                        %Our Agent tries to murder a Cop, but dies in the
-                        %process
+                        Murdered_Cops_Array(h) = 
+                        	Murdered_Cops_Array(h)+1;
+                    elseif length(CopFields) >= 1 && 
+                    	random('Uniform',0,1,1,1) > 
+                    	Murder_success_rate && 
+                    	random('Uniform',0,1,1,1) < 
+                    	Murder_assasin_death_rate
+                        %Our Agent tries to murder a Cop, 
+                        %but dies in the process
                         Playfield{(i-1)*side + j} = Empty();
                     elseif length(EmptyFields) >= 1
                         %Wander aimlessly
-                        GoTo = select_field(EmptyFields, ImportantFields, side );
+                        GoTo = select_field(EmptyFields, 
+                        	ImportantFields, side );
                         
                         A = A.Set_Move(false);
 
-                        %AllAgentMoves(length(AllAgentMoves)+1) = GoTo;
+                        %AllAgentMoves(length(AllAgentMoves)+1) = 
+                        %GoTo;
 
                         Playfield{(i-1)*side + j} = Empty();
                         Playfield{GoTo} = A;        %Actual Move
@@ -447,31 +544,69 @@ for h=1:Number_of_Frames
 
                 for k=1:1:A.Vision
 
-                    if i > k && strcmp(Playfield{(i-1)*side + j - k*side}.Get_Type(), 'Agent')
-                        Agents = Agents+Playfield{(i-1)*side + j - k*side}.Effectiveness;
-                    elseif i > k && strcmp(Playfield{(i-1)*side + j - k*side}.Get_Type(), 'Cop')
-                        Cops = Cops+Playfield{(i-1)*side + j - k*side}.Effectiveness;
+                    if i > k && strcmp(
+                    	Playfield{(i-1)*side + j - k*side}.
+                    	Get_Type(), 'Agent')
+                        Agents = Agents+
+                        	Playfield{(i-1)*side + j - k*side}.
+                        	Effectiveness;
+                    elseif i > k && strcmp(
+                    	Playfield{(i-1)*side + j - k*side}.
+                    	Get_Type(), 'Cop')
+                        Cops = Cops+
+                        	Playfield{(i-1)*side + j - k*side}.
+                        	Effectiveness;
                     end
-                    if i <= side-k && strcmp(Playfield{(i-1)*side + j + k*side}.Get_Type(), 'Agent')
-                        Agents = Agents+Playfield{(i-1)*side + j + k*side}.Effectiveness;
-                    elseif i <= side-k && strcmp(Playfield{(i-1)*side + j + k*side}.Get_Type(), 'Cop')
-                        Cops = Cops+Playfield{(i-1)*side + j + k*side}.Effectiveness;
+                    if i <= side-k && strcmp(
+                    	Playfield{(i-1)*side + j + k*side}.
+                    	Get_Type(), 'Agent')
+                        Agents = Agents+
+                        	Playfield{(i-1)*side + j + k*side}.
+                        	Effectiveness;
+                    elseif i <= side-k && strcmp(
+                    	Playfield{(i-1)*side + j + k*side}.
+                    	Get_Type(), 'Cop')
+                        Cops = Cops+
+                        	Playfield{(i-1)*side + j + k*side}.
+                        	Effectiveness;
                     end
-                    if j > k && strcmp(Playfield{(i-1)*side + j - k}.Get_Type(), 'Agent')
-                        Agents = Agents+Playfield{(i-1)*side + j - k}.Effectiveness;
-                    elseif j > k && strcmp(Playfield{(i-1)*side + j - k}.Get_Type(), 'Cop')
-                        Cops = Cops+Playfield{(i-1)*side + j - k}.Effectiveness;
+                    if j > k && strcmp(
+                    	Playfield{(i-1)*side + j - k}.
+                    	Get_Type(), 'Agent')
+                        Agents = Agents+
+                        	Playfield{(i-1)*side + j - k}.
+                        	Effectiveness;
+                    elseif j > k && strcmp(
+                    	Playfield{(i-1)*side + j - k}.
+                    	Get_Type(), 'Cop')
+                        Cops = Cops+
+                        	Playfield{(i-1)*side + j - k}.
+                        	Effectiveness;
                     end
-                    if j <= side-k && strcmp(Playfield{(i-1)*side + j + k}.Get_Type(), 'Agent')
-                        Agents = Agents+Playfield{(i-1)*side + j + k}.Effectiveness;
-                    elseif j <= side-k && strcmp(Playfield{(i-1)*side + j + k}.Get_Type(), 'Cop')
-                        Cops = Cops+Playfield{(i-1)*side + j + k}.Effectiveness;
+                    if j <= side-k && strcmp(
+                    	Playfield{(i-1)*side + j + k}.
+                    	Get_Type(), 'Agent')
+                        Agents = Agents+
+                        	Playfield{(i-1)*side + j + k}.
+                        	Effectiveness;
+                    elseif j <= side-k && strcmp(
+                    	Playfield{(i-1)*side + j + k}.
+                    	Get_Type(), 'Cop')
+                        Cops = Cops+
+                        	Playfield{(i-1)*side + j + k}.
+                        	Effectiveness;
                     end
 
                 end
 
-                Colors_Attitude((i-1)*side + j) = max(-1, A.Grievance(L) - A.Net_Risk(A.Chance_of_Arrest(k, Cops, Agents), Jailterm_Max, Better_Deterrent_of_Jailtime));%random('Uniform',0,1,1,1);
-                if A.Grievance(L) - A.Net_Risk(A.Chance_of_Arrest(k, Cops, Agents), Jailterm_Max, Better_Deterrent_of_Jailtime) > Activism_Threshold
+                Colors_Attitude((i-1)*side + j) = max(-1, 
+                	A.Grievance(L) - A.Net_Risk(A.
+                	Chance_of_Arrest(k, Cops, Agents), 
+                	Jailterm_Max, Better_Deterrent_of_Jailtime));
+                if A.Grievance(L) - A.Net_Risk(A.Chance_of_Arrest(
+                	k, Cops, Agents), Jailterm_Max, 
+                	Better_Deterrent_of_Jailtime) > 
+                	Activism_Threshold
                     Colors_Activism((i-1)*side + j) = 1;
                     A = A.Set_Active(true);
                     Playfield{(i-1)*side + j} = A;
@@ -489,7 +624,9 @@ for h=1:Number_of_Frames
                 Colors_Attitude((i-1)*side + j) = -5;
                 Colors_Activism((i-1)*side + j) = -5;
                 
-                if (L + A.Pers_Legitimacy > Legitimacy_Threshold_Stop || Defective_Cops == false)
+                if (L + A.Pers_Legitimacy > 
+                	Legitimacy_Threshold_Stop || 
+                	Defective_Cops == false)
                     Active_Cops = Active_Cops + 1;
                 else
                     Inactive_Cops = Inactive_Cops + 1;
@@ -521,15 +658,28 @@ for h=1:Number_of_Frames
         figx=figure(figurecounter);
         figurecounter = figurecounter+1;
         axes;
-        scatter(x, y, 150, Colors_Attitude, 's', 'filled');
-        legend([ 'Attitude Round ', num2str(h), 10, 'Dark Blue = Cops', 10, 'Light Blue = Empty', 10, 'Red = Agents, the darker the worse the Attitude', 10,10, 'Active Agents = ', num2str(Active_Agents), 10, 'Inactive Agents = ', num2str(Inactive_Agents), 10, 'Active Cops = ', num2str(Active_Cops)] ,'Location','SouthOutside');
+        scatter(x, y, 150, Colors_Attitude, 's', 'filled');    
+        legend([ 'Attitude Round ', num2str(h), 10, 
+        	'Dark Blue = Cops', 10, 'Light Blue = Empty', 10, 
+        	'Red = Agents, the darker the worse the Attitude', 
+        	10,10, 'Active Agents = ', num2str(Active_Agents), 
+        	10, 'Inactive Agents = ', num2str(Inactive_Agents), 
+        	10, 'Active Cops = ', num2str(Active_Cops)] ,
+        	'Location','SouthOutside');
         axis([0 side+1 0 side+1]);
 
         figx=figure(figurecounter);
         figurecounter = figurecounter+1;
         axes;
-        scatter(x, y, 150, Colors_Activism, 's', 'filled');
-        legend([ 'Activism Round ', num2str(h), 10, 'Dark Blue = Cops', 10, 'Light Blue = Empty', 10, 'Red = Active Agents', 10, 'Light Red = Inactive Agents', 10,10, 'Active Agents = ', num2str(Active_Agents), 10, 'Inactive Agents = ', num2str(Inactive_Agents), 10, 'Active Cops = ', num2str(Active_Cops)] ,'Location','SouthOutside');
+        scatter(x, y, 150, Colors_Activism, 's', 'filled');   
+        legend([ 'Activism Round ', num2str(h), 10, 
+        	'Dark Blue = Cops', 10, 'Light Blue = Empty', 10, 
+        	'Red = Active Agents', 10, 
+        	'Light Red = Inactive Agents', 10,10, 
+        	'Active Agents = ', num2str(Active_Agents), 10, 
+        	'Inactive Agents = ', num2str(Inactive_Agents), 10, 
+        	'Active Cops = ', num2str(Active_Cops)] ,
+        	'Location','SouthOutside');
         axis([0 side+1 0 side+1]);
         %Movie(:,i)=getframe(fig1,winsize); 
         

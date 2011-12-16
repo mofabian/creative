@@ -280,11 +280,22 @@ In case the number of frames ishigher than five, one might want to consider notp
 
 \section{Simulation Results and Discussion}
 
-USE THE FUNDAMENTAL QUESTIONS POSED IN THE PROPOSAL
+%USE THE FUNDAMENTAL QUESTIONS POSED IN THE PROPOSAL
+
+Not for all input variables the outcome of the simulation is reasonably.\newline\newline
+
+View\newline
+We get a problem with our simulation if the view is very low and in the same time the population density is high. An Example for that are the plots of the field in the chapter Influence of Cop Distribution.\newline
+There we have a view in (1,3) and a ratio of 0.7 of occupied to unoccupied fields. After 100 rounds the people aren’t randomly distributed anymore. They sort of glue together in the corner. Since the view is small most of the people in this accumulation can’t move at all.\newline\newline
+
+Movement\newline
+Our agents and cops can only move left, right, up and down. This seems to be not very realistic. If only one cop is in a particular region the situation can be very unrealistic. But if many agents are in a particular area they can cover the whole area with their movement and the situation is similar to the case there the cops can move in all directions. So always place enough cops in the field. The same also holds for agents. Enough means at least more than 40.
 
 \newpage
 
 \section{Summary and Outlook}
+
+None submitted by David.
 
 \newpage
 
@@ -333,6 +344,28 @@ Listing from source file \texttt{Display.m} \\
 \lstset{commentstyle=\textit, stringstyle=\upshape,showspaces=false}
 \lstset{frame=trBL,frameround=tttt}
 \lstinputlisting[caption=Display,label=lst:Display]{Display.m}
+%---------------------------------------------------------------
+
+Listing from source file \texttt{Displaycentre.m}, changes only \\
+
+%---------------------------------------------------------------
+\lstset{language=matlab}
+\lstset{backgroundcolor=\color{listinggray},rulecolor=\color{blue}}
+\lstset{linewidth=\textwidth}
+\lstset{commentstyle=\textit, stringstyle=\upshape,showspaces=false}
+\lstset{frame=trBL,frameround=tttt}
+\lstinputlisting[caption=Display,label=lst:Display]{Displaycentre.m}
+%---------------------------------------------------------------
+
+Listing from source file \texttt{Displayline.m}, changes only \\
+
+%---------------------------------------------------------------
+\lstset{language=matlab}
+\lstset{backgroundcolor=\color{listinggray},rulecolor=\color{blue}}
+\lstset{linewidth=\textwidth}
+\lstset{commentstyle=\textit, stringstyle=\upshape,showspaces=false}
+\lstset{frame=trBL,frameround=tttt}
+\lstinputlisting[caption=Display,label=lst:Display]{Displayline.m}
 %---------------------------------------------------------------
 
 Listing from source file \texttt{Empty.m} \\

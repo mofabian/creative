@@ -7,9 +7,9 @@
 \usepackage{epstopdf}
 \usepackage{natbib}
 \usepackage{amssymb, amsmath}
-\usepackage{a4page}
 \usepackage{listings}
 \usepackage{color}
+\usepackage{a4page}
 \DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
 \definecolor{listinggray}{gray}{0.9}
 
@@ -333,6 +333,28 @@ Listing from source file \texttt{Display.m} \\
 \lstset{commentstyle=\textit, stringstyle=\upshape,showspaces=false}
 \lstset{frame=trBL,frameround=tttt}
 \lstinputlisting[caption=Display,label=lst:Display]{Display.m}
+%---------------------------------------------------------------
+
+Listing from source file \texttt{Displaycentre.m}, changes only \\
+
+%---------------------------------------------------------------
+\lstset{language=matlab}
+\lstset{backgroundcolor=\color{listinggray},rulecolor=\color{blue}}
+\lstset{linewidth=\textwidth}
+\lstset{commentstyle=\textit, stringstyle=\upshape,showspaces=false}
+\lstset{frame=trBL,frameround=tttt}
+\lstinputlisting[caption=Display,label=lst:Display]{Displaycentre.m}
+%---------------------------------------------------------------
+
+Listing from source file \texttt{Displayline.m}, changes only \\
+
+%---------------------------------------------------------------
+\lstset{language=matlab}
+\lstset{backgroundcolor=\color{listinggray},rulecolor=\color{blue}}
+\lstset{linewidth=\textwidth}
+\lstset{commentstyle=\textit, stringstyle=\upshape,showspaces=false}
+\lstset{frame=trBL,frameround=tttt}
+\lstinputlisting[caption=Display,label=lst:Display]{Displayline.m}
 %---------------------------------------------------------------
 
 Listing from source file \texttt{Empty.m} \\
