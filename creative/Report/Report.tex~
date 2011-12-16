@@ -7,9 +7,9 @@
 \usepackage{epstopdf}
 \usepackage{natbib}
 \usepackage{amssymb, amsmath}
-\usepackage{a4page}
 \usepackage{listings}
 \usepackage{color}
+\usepackage{a4page}
 \DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
 \definecolor{listinggray}{gray}{0.9}
 
@@ -280,11 +280,140 @@ In case the number of frames ishigher than five, one might want to consider notp
 
 \section{Simulation Results and Discussion}
 
-USE THE FUNDAMENTAL QUESTIONS POSED IN THE PROPOSAL
+%USE THE FUNDAMENTAL QUESTIONS POSED IN THE PROPOSAL
+
+\subsection{Comparison of Epstein Model with our Model}
+
+\includegraphics{Picture1.png}
+
+As in the Epstein model it can happen that the local cop to agent ratio drops too low and agents turn active. Later when the cops return the active agents disappear again either by arresting or turning inactive.  A good example for that is round 250. Since there are no cops in one corner agents turn active. The simulation was done with the following input: \newline
+L = 0.7;\newline
+O\_to\_U\_Ratio = 0.5;     \newline
+C\_to\_A\_Ratio = 0.1;      \newline
+Jailterm\_Min = 3;          \newline
+Jailterm\_Max = 5;          \newline
+Activism\_Threshold = 0.1;\newline
+Vision\_Min\_Cops = 5;\newline
+Vision\_Max\_Cops =7;\newline
+Vision\_Min\_Agent = 5;\newline
+Vision\_Max\_Agent = 7;\newline
+
+All the other variables have been set to 0.\newline
+
+\includegraphics{Picture2.png}\newline
+\includegraphics{Picture3.png}\newline
+\includegraphics{Picture4.png}\newline
+\includegraphics{Picture5.png}\newpage
+
+In the next graph we plot the number of active agents in every round. There is a sudden drop in the first couple of rounds: In the first round there are 116 active agents. But later the number of active agents is never larger than 60. Also can be observed that the number of active agents and the number of imprisoned agents affect each other. If the number of active agents is high the number of prisoner will probably be low and if only a few agents are active the prisoner will probably be full and vice versa.\newline
+
+\includegraphics{Picture6.png}\newline
+\includegraphics{Picture7.png}
+
+\subsubsection{Salami Tactics of Corruption}
+As in the Epstein model we studied the influence of a Change in legitimacy. We looked at two cases: A sudden drop in legitimacy and a smoothly decay in legitimacy. Booth cases happened in the real world. A very good example for a sudden legitimacy drop is Greece. After a protester was shot during a demonstration the public opinion suddenly dropped and the demonstration became even bigger.  An example of a smoothly decay is Egypt. The system seemed to by quiet stable but the lack of a better future for a whole generation steadily decreased the legitimacy.\newline
+
+\subsubsection{Sudden drop}
+We started with a legitimacy of 0.9.  Than in round 10 we reduced the legitimacy by -0.3.  This leads to a sudden increase of the number of active agents. Since the central force is very strong (number of Cop/agents =0.2) the number of active agents declines again and the prison gets full.
+
+\includegraphics{Picture8.png}
+
+L=0.9\newline
+O\_to\_U\_ratio=0.5\newline
+C\_to\_A\_Ratio=0.2\newline
+Jailterm =(8,25)\newline
+Activism\_Treshold=0.1\newline
+Vision=7
+
+\subsubsection{Linear decrease}
+In this case all the parameters are exactly the same as above. The only difference is the Legitimacy. Instead of a sudden drop we reduced the legitimacy round by -0.6/200. In this case we don’t observe a peak in the number of active agents. Since the central force is strong and the prison terms rather long the cops can handle the situation.
+
+\includegraphics{Picture9.png}
+
+L=0.9\newline
+O\_to\_U\_ratio=0.5\newline
+C\_to\_A\_Ratio=0.2\newline
+Jailterm = (8, 25)\newline
+Activism\_Treshold=0.1\newline
+Vision=7
+
+\subsection{Influence of Cop Distribution}
+We wondered what would change if we would let star the cop in the middle instead of randomly distributed and how does the influence of the starting position of the cops depends on their view.\newline
+The idea is the following: In the beginning 49 cops are stationed in the middle of the field. Then they spread out and suppress the demonstrations. The question is now: How many rounds does it takes until the cops starting in the middle are as successful as the ones starting randomly.\newline
+The following plot shows the field in the first round and in the 100 round. \newline\newline
+Centre\newline\newline
+\includegraphics{Picture10.png}\newpage
+Random\newline\newline
+\includegraphics{Picture11.png}\newline
+
+Centre\newline\newline
+\includegraphics{Picture12.png}\newpage
+Random\newline\newline
+\includegraphics{Picture13.png}\newline
+
+
+There's clearly a big difference in the first round, but after 100 rounds the plots looks alike. \newline
+We run the simulation with the following parameters: \newline
+L=0.8\newline
+O\_to\_U\_Ratio =0.7\newline
+Jail = (3,6)\newline
+Activism\_threshold=0.1\newline
+Vision = (1,3)\newline
+In the case of randomly distributed cops we set the C\_to\_A\_Ratio to 0.0743. So expected value of cops is 49 as in the case of cops starting in the centre.\newline\newline
+
+In the following two graphs we clearly see that the cops starting in the middle are less successful in suppressing active agents and filling up the prison.\newline\newline
+
+Centre\newline
+\includegraphics{Picture14.png}\newline
+Random\newline
+\includegraphics{Picture15.png}\newline
+
+To get a more accurate result we took the mean and standard deviation of the number of active agents and the number of active agents over 30 runs of the simulations. We did that for 3 different tips of view ranges:\newline\newline
+
+\subsubsection{View randomly distributed in (1,3)}
+
+\includegraphics{Picture16.png}
+
+After 60 rounds the cops starting in the middle are still clearly less successful in suppressing active agents than randomly distributed cops. Also the shapes of the curves doesn’t look alike\newline\newline
+
+\includegraphics{Picture17.png}
+
+The cops on the middle need 60 rounds until they finally have imprisoned as many agents as the randomly distributed cops.\newline\newline
+
+\subsubsection{View randomly distributed in  (3-5)}
+
+\includegraphics{Picture18.png}
+
+In this case it takes the cops starting in the middle about 25 rounds to get as successful in suppressing the active agents as the randomly distributed cops. \newline\newline
+
+\includegraphics{Picture19.png}
+
+The curve in the random case after round 5 looks like the curve in the centre case after round 30. This holds also for the graph of active agents.\newline\newline
+
+\subsubsection{View randomly distributed in  (5-7)}
+
+\includegraphics{Picture20.png}
+
+In this case the curves in the centre case shifted by about 5 rounds to the right looks like the curves in the random case. If we would increase the view even more the difference between the two cases would disappear completely. This is clear since we have only a 40* 40 field. So after about 4 moves of length 10 a cop starting in the middle can reach every position in the field.\newline\newline
+
+It is also very interesting how the whole system behaves: After a number of rounds depending on view, population density and cop density  the average of the simulations gets constant.  \newline\newline
+
+\subsection{Problems}
+
+\subsubsection{View}
+We get a problem with our simulation if the view is very low and in the same time the population density is high. An Example for that are the plots of the field in the chapter Influence of Cop Distribution.\newline
+There we have a view in (1,3) and a ratio of 0.7 of occupied to unoccupied fields. After 100 rounds the people aren’t randomly distributed anymore. They sort of glue together in the corner. Since the view is small most of the people in this accumulation can’t move at all.\newline\newline
+
+\subsubsection{Movement}
+Our agents and cops can only move left, right, up and down. This seems to be not very realistic. If only one cop is in a particular region the situation can be very unrealistic. But if many agents are in a particular area they can cover the whole area with their movement and the situation is similar to the case there the cops can move in all directions. So always place enough cops in the field. The same also holds for agents. Enough means at least more than 40.
 
 \newpage
 
 \section{Summary and Outlook}
+
+Summary and Outlook\newline
+We implemented the basic idea of the Epstein and added several extra variables to simulate things as active agents trying to kill a cop, agent killed while trying to kill a cop, a cop or an agent killed during imprisonment, legitimacy influenced by a deadly incident during imprisonment, a personal legitimacy for every agent and cop, cops being more human i.e. stop working or even defect if legitimacy is too low.\newline
+We compared our (basic) model in some simple cases with the Epstein model and got similar results. WE also studied the limitations of our model. We had a closer look on the influence of the starting position of the cops depending on their view.  Very interesting was the fact that in a couple of cases the mean over several simulations became constant after a couple of rounds. It would be interesting to check if this happens always or if their exist cases there the average doesn’t get constant but maybe behave periodic.
 
 \newpage
 
@@ -333,6 +462,28 @@ Listing from source file \texttt{Display.m} \\
 \lstset{commentstyle=\textit, stringstyle=\upshape,showspaces=false}
 \lstset{frame=trBL,frameround=tttt}
 \lstinputlisting[caption=Display,label=lst:Display]{Display.m}
+%---------------------------------------------------------------
+
+Listing from source file \texttt{Displaycentre.m}, changes only \\
+
+%---------------------------------------------------------------
+\lstset{language=matlab}
+\lstset{backgroundcolor=\color{listinggray},rulecolor=\color{blue}}
+\lstset{linewidth=\textwidth}
+\lstset{commentstyle=\textit, stringstyle=\upshape,showspaces=false}
+\lstset{frame=trBL,frameround=tttt}
+\lstinputlisting[caption=Display,label=lst:Display]{Displaycentre.m}
+%---------------------------------------------------------------
+
+Listing from source file \texttt{Displayline.m}, changes only \\
+
+%---------------------------------------------------------------
+\lstset{language=matlab}
+\lstset{backgroundcolor=\color{listinggray},rulecolor=\color{blue}}
+\lstset{linewidth=\textwidth}
+\lstset{commentstyle=\textit, stringstyle=\upshape,showspaces=false}
+\lstset{frame=trBL,frameround=tttt}
+\lstinputlisting[caption=Display,label=lst:Display]{Displayline.m}
 %---------------------------------------------------------------
 
 Listing from source file \texttt{Empty.m} \\
