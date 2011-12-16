@@ -1,44 +1,55 @@
-\contentsline {section}{\numberline {1}Abstract}{5}
-\contentsline {section}{\numberline {2}Individual contributions}{5}
-\contentsline {section}{\numberline {3}Introduction and Motivations}{6}
-\contentsline {section}{\numberline {4}Description of the Model (Cop/Agent)}{7}
-\contentsline {subsection}{\numberline {4.1}The original agent specification}{7}
-\contentsline {subsection}{\numberline {4.2}Additional agent specification}{8}
-\contentsline {subsection}{\numberline {4.3}The original cop specification}{8}
-\contentsline {subsection}{\numberline {4.4}Additional cop specification}{9}
-\contentsline {subsection}{\numberline {4.5}Movement and Jail Terms}{9}
-\contentsline {subsection}{\numberline {4.6}General changes of the model}{9}
-\contentsline {section}{\numberline {5}Implementation}{11}
-\contentsline {subsection}{\numberline {5.1}Problem Generation}{11}
-\contentsline {subsection}{\numberline {5.2}Step}{11}
-\contentsline {subsubsection}{\numberline {5.2.1}Reset Moves}{11}
-\contentsline {subsubsection}{\numberline {5.2.2}Release imprisoned}{11}
-\contentsline {subsubsection}{\numberline {5.2.3}Move Cops and Agents}{11}
-\contentsline {subsubsection}{\numberline {5.2.4}Set Status of Agents}{12}
-\contentsline {subsubsection}{\numberline {5.2.5}Display current Model}{12}
-\contentsline {subsection}{\numberline {5.3}Display summarizing plots}{12}
-\contentsline {subsection}{\numberline {5.4}Tweaks}{12}
-\contentsline {subsubsection}{\numberline {5.4.1}Size}{12}
-\contentsline {subsubsection}{\numberline {5.4.2}Occupied to Unoccupied Ratio}{12}
-\contentsline {subsubsection}{\numberline {5.4.3}Cop to Agent Ratio}{12}
-\contentsline {subsubsection}{\numberline {5.4.4}Jailterm Min/Max}{13}
-\contentsline {subsubsection}{\numberline {5.4.5}Jail sentence}{13}
-\contentsline {subsubsection}{\numberline {5.4.6}Jail Aggreviance}{13}
-\contentsline {subsubsection}{\numberline {5.4.7}Activism Threshold}{13}
-\contentsline {subsubsection}{\numberline {5.4.8}Murder Threshold}{13}
-\contentsline {subsubsection}{\numberline {5.4.9}Murder success rate}{13}
-\contentsline {subsubsection}{\numberline {5.4.10}Murder assassin death rate}{14}
-\contentsline {subsubsection}{\numberline {5.4.11}Vision Min/Max}{14}
-\contentsline {subsubsection}{\numberline {5.4.12}Death}{14}
-\contentsline {subsubsection}{\numberline {5.4.13}Important Places}{14}
-\contentsline {subsubsection}{\numberline {5.4.14}Important people}{14}
-\contentsline {subsubsection}{\numberline {5.4.15}Defective Cops}{15}
-\contentsline {subsubsection}{\numberline {5.4.16}Better Legitimacy}{15}
-\contentsline {subsubsection}{\numberline {5.4.17}Legitimacy Change each step}{15}
-\contentsline {subsubsection}{\numberline {5.4.18}Number of Frames}{15}
-\contentsline {subsubsection}{\numberline {5.4.19}Plot every X Frames}{15}
-\contentsline {section}{\numberline {6}Simulation Results and Discussion}{16}
-\contentsline {section}{\numberline {7}Summary and Outlook}{17}
-\contentsline {section}{\numberline {8}References}{18}
-\contentsline {section}{\numberline {9}Appendix A: Proposal}{19}
-\contentsline {section}{\numberline {10}Appendix B: Code}{22}
+\contentsline {section}{\numberline {1}Abstract}{6}
+\contentsline {section}{\numberline {2}Individual contributions}{6}
+\contentsline {section}{\numberline {3}Introduction and Motivations}{7}
+\contentsline {section}{\numberline {4}Description of the Model (Cop/Agent)}{8}
+\contentsline {subsection}{\numberline {4.1}The original agent specification}{8}
+\contentsline {subsection}{\numberline {4.2}Additional agent specification}{9}
+\contentsline {subsection}{\numberline {4.3}The original cop specification}{9}
+\contentsline {subsection}{\numberline {4.4}Additional cop specification}{10}
+\contentsline {subsection}{\numberline {4.5}Movement and Jail Terms}{10}
+\contentsline {subsection}{\numberline {4.6}General changes of the model}{10}
+\contentsline {section}{\numberline {5}Implementation}{12}
+\contentsline {subsection}{\numberline {5.1}Problem Generation}{12}
+\contentsline {subsection}{\numberline {5.2}Step}{12}
+\contentsline {subsubsection}{\numberline {5.2.1}Reset Moves}{12}
+\contentsline {subsubsection}{\numberline {5.2.2}Release imprisoned}{12}
+\contentsline {subsubsection}{\numberline {5.2.3}Move Cops and Agents}{12}
+\contentsline {subsubsection}{\numberline {5.2.4}Set Status of Agents}{13}
+\contentsline {subsubsection}{\numberline {5.2.5}Display current Model}{13}
+\contentsline {subsection}{\numberline {5.3}Display summarizing plots}{13}
+\contentsline {subsection}{\numberline {5.4}Tweaks}{13}
+\contentsline {subsubsection}{\numberline {5.4.1}Size}{13}
+\contentsline {subsubsection}{\numberline {5.4.2}Occupied to Unoccupied Ratio}{13}
+\contentsline {subsubsection}{\numberline {5.4.3}Cop to Agent Ratio}{13}
+\contentsline {subsubsection}{\numberline {5.4.4}Jailterm Min/Max}{14}
+\contentsline {subsubsection}{\numberline {5.4.5}Jail sentence}{14}
+\contentsline {subsubsection}{\numberline {5.4.6}Jail Aggreviance}{14}
+\contentsline {subsubsection}{\numberline {5.4.7}Activism Threshold}{14}
+\contentsline {subsubsection}{\numberline {5.4.8}Murder Threshold}{14}
+\contentsline {subsubsection}{\numberline {5.4.9}Murder success rate}{14}
+\contentsline {subsubsection}{\numberline {5.4.10}Murder assassin death rate}{15}
+\contentsline {subsubsection}{\numberline {5.4.11}Vision Min/Max}{15}
+\contentsline {subsubsection}{\numberline {5.4.12}Death}{15}
+\contentsline {subsubsection}{\numberline {5.4.13}Important Places}{15}
+\contentsline {subsubsection}{\numberline {5.4.14}Important people}{15}
+\contentsline {subsubsection}{\numberline {5.4.15}Defective Cops}{16}
+\contentsline {subsubsection}{\numberline {5.4.16}Better Legitimacy}{16}
+\contentsline {subsubsection}{\numberline {5.4.17}Legitimacy Change each step}{16}
+\contentsline {subsubsection}{\numberline {5.4.18}Number of Frames}{16}
+\contentsline {subsubsection}{\numberline {5.4.19}Plot every X Frames}{16}
+\contentsline {section}{\numberline {6}Simulation Results and Discussion}{17}
+\contentsline {subsection}{\numberline {6.1}Comparison of Epstein Model with our Model}{17}
+\contentsline {subsubsection}{\numberline {6.1.1}Salami Tactics of Corruption}{23}
+\contentsline {subsubsection}{\numberline {6.1.2}Sudden drop}{23}
+\contentsline {subsubsection}{\numberline {6.1.3}Linear decrease}{25}
+\contentsline {subsection}{\numberline {6.2}Influence of Cop Distribution}{27}
+\contentsline {subsubsection}{\numberline {6.2.1}View randomly distributed in (1,3)}{31}
+\contentsline {subsubsection}{\numberline {6.2.2}View randomly distributed in (3-5)}{33}
+\contentsline {subsubsection}{\numberline {6.2.3}View randomly distributed in (5-7)}{35}
+\contentsline {subsection}{\numberline {6.3}Problems}{36}
+\contentsline {subsubsection}{\numberline {6.3.1}View}{36}
+\contentsline {subsubsection}{\numberline {6.3.2}Movement}{36}
+\contentsline {section}{\numberline {7}Summary and Outlook}{37}
+\contentsline {section}{\numberline {8}References}{38}
+\contentsline {section}{\numberline {9}Appendix A: Proposal}{39}
+\contentsline {section}{\numberline {10}Appendix B: Code}{42}

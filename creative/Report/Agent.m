@@ -27,7 +27,8 @@ classdef Agent
            end
            
            function G = Grievance (this, L)
-               G = this.Hardship*(1-min(1, max(0, L+this.Pers_Legitimacy)));
+               G = this.Hardship*(1-min(1, max(0, L+
+                 this.Pers_Legitimacy)));
            end
            function P = Chance_of_Arrest (this, k, C, A)
                P = 1 - exp(-k*C/A);

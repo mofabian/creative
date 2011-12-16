@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.11.20)  15 DEC 2011 13:32
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.11.20)  17 DEC 2011 00:12
 entering extended mode
  %&-line parsing enabled.
 **Report.tex
@@ -230,6 +230,12 @@ Package color Info: Driver file: pdftex.def on input line 130.
 
 LaTeX Warning: Label `lst:Agent' multiply defined.
 
+
+LaTeX Warning: Label `lst:Display' multiply defined.
+
+
+LaTeX Warning: Label `lst:Display' multiply defined.
+
 )
 \openout1 = `Report.aux'.
 
@@ -329,11 +335,11 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./ETHlogo-eps-converted-to
 .pdf>] [2]
-(./Report.toc [3])
+(./Report.toc [3] [4])
 \tf@toc=\write3
 \openout3 = `Report.toc'.
 
- [4]
+ [5]
 Underfull \hbox (badness 10000) in paragraph at lines 97--106
 
  []
@@ -345,104 +351,429 @@ Underfull \hbox (badness 10000) in paragraph at lines 97--106
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 97--106
-
- []
-
-[5]
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ú in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ù in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ú in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ù in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ú in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ù in font cmr12!
-
-Underfull \hbox (badness 10000) in paragraph at lines 110--116
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 110--116
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 110--116
 
  []
 
 [6]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ú in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ù in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ú in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ù in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ú in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ù in font cmr12!
+
+Underfull \hbox (badness 10000) in paragraph at lines 110--116
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 110--116
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 110--116
+
+ []
+
+[7]
 
 LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 13
 7.
 
-[7] [8] [9] [10]
+[8] [9] [10] [11]
 Underfull \hbox (badness 10000) in paragraph at lines 199--201
 
  []
 
-[11] [12] [13] [14] [15] [16] [17]
+[12] [13] [14] [15] [16] <Picture1.png, id=65, 527.9725pt x 583.17876pt>
+File: Picture1.png Graphic file (type png)
 
-Package pdftex.def Warning: Option `bb' does not make sense,
-(pdftex.def)                using `viewport' instead on input line 297.
-
-<Proposal.pdf, id=68, page=1, 597.23125pt x 845.1575pt>
-File: Proposal.pdf Graphic file (type pdf)
-
-<use Proposal.pdf, page 1>
-Overfull \hbox (3.1287pt too wide) in paragraph at lines 297--298
+<use Picture1.png>
+Overfull \hbox (61.34602pt too wide) in paragraph at lines 287--288
 [] 
  []
 
-[18]
+
+Underfull \hbox (badness 10000) in paragraph at lines 289--300
+
+ []
+
+[17 <./Picture1.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 301--302
+
+ []
+
+<Picture2.png, id=69, 523.9575pt x 251.94125pt>
+File: Picture2.png Graphic file (type png)
+ <use Picture2.png>
+<Picture3.png, id=70, 526.96875pt x 613.29124pt>
+File: Picture3.png Graphic file (type png)
+ <use Picture3.png>
+<Picture4.png, id=71, 524.96124pt x 626.34pt>
+File: Picture4.png Graphic file (type png)
+ <use Picture4.png>
+<Picture5.png, id=72, 523.9575pt x 253.94875pt>
+File: Picture5.png Graphic file (type png)
+ <use Picture5.png>
+Overfull \hbox (57.33104pt too wide) in paragraph at lines 303--306
+[][] 
+ []
+
+
+Overfull \hbox (60.34227pt too wide) in paragraph at lines 303--306
+[] 
+ []
+
+
+Overfull \hbox (58.33478pt too wide) in paragraph at lines 303--306
+[] 
+ []
+
+
+Overfull \hbox (57.33104pt too wide) in paragraph at lines 303--306
+[] 
+ []
+
+[18 <./Picture2.png (PNG copy)>] [19 <./Picture3.png (PNG copy)>] [20 <./Pictur
+e4.png (PNG copy)>] [21 <./Picture5.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 308--309
+
+ []
+
+<Picture6.png, id=86, 497.86pt x 353.32pt>
+File: Picture6.png Graphic file (type png)
+ <use Picture6.png>
+<Picture7.png, id=87, 500.87125pt x 352.31625pt>
+File: Picture7.png Graphic file (type png)
+ <use Picture7.png>
+Overfull \hbox (31.2336pt too wide) in paragraph at lines 310--312
+[][] 
+ []
+
+
+Overfull \hbox (34.24483pt too wide) in paragraph at lines 310--312
+[] 
+ []
+
+[22 <./Picture6.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 314--315
+
+ []
+
+<Picture8.png, id=91, 537.00626pt x 655.44875pt>
+File: Picture8.png Graphic file (type png)
+ <use Picture8.png>
+Overfull \hbox (70.37976pt too wide) in paragraph at lines 319--320
+[][] 
+ []
+
+[23 <./Picture7.png (PNG copy)>] [24 <./Picture8.png (PNG copy)>]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+
+<Picture9.png, id=98, 541.02126pt x 610.28pt>
+File: Picture9.png Graphic file (type png)
+ <use Picture9.png>
+Overfull \hbox (74.39474pt too wide) in paragraph at lines 331--332
+[][] 
+ []
+
+[25] [26 <./Picture9.png (PNG copy)>]
+<Picture10.png, id=106, 522.95375pt x 252.945pt>
+File: Picture10.png Graphic file (type png)
+ <use Picture10.png>
+Underfull \hbox (badness 10000) in paragraph at lines 341--345
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 341--345
+
+ []
+
+
+Overfull \hbox (56.32729pt too wide) in paragraph at lines 341--345
+[] 
+ []
+
+[27 <./Picture10.png (PNG copy)>]
+<Picture11.png, id=110, 521.95pt x 246.9225pt>
+File: Picture11.png Graphic file (type png)
+ <use Picture11.png>
+Underfull \hbox (badness 10000) in paragraph at lines 346--348
+
+ []
+
+
+Overfull \hbox (55.32353pt too wide) in paragraph at lines 346--348
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 346--348
+
+ []
+
+<Picture12.png, id=111, 522.95375pt x 248.93pt>
+File: Picture12.png Graphic file (type png)
+ <use Picture12.png>
+Underfull \hbox (badness 10000) in paragraph at lines 349--350
+
+ []
+
+
+Overfull \hbox (56.32729pt too wide) in paragraph at lines 349--350
+[] 
+ []
+
+[28 <./Picture11.png (PNG copy)> <./Picture12.png (PNG copy)>]
+<Picture13.png, id=115, 540.0175pt x 270.00874pt>
+File: Picture13.png Graphic file (type png)
+ <use Picture13.png>
+Underfull \hbox (badness 10000) in paragraph at lines 351--353
+
+ []
+
+
+Overfull \hbox (73.39099pt too wide) in paragraph at lines 351--353
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 351--353
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 355--363
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 355--363
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 364--364
+
+ []
+
+[29 <./Picture13.png (PNG copy)>]
+<Picture14.png, id=119, 540.0175pt x 205.76875pt>
+File: Picture14.png Graphic file (type png)
+ <use Picture14.png>
+<Picture15.png, id=120, 536.0025pt x 206.7725pt>
+File: Picture15.png Graphic file (type png)
+ <use Picture15.png>
+Overfull \hbox (73.39099pt too wide) in paragraph at lines 366--370
+[] 
+ []
+
+
+Overfull \hbox (69.376pt too wide) in paragraph at lines 366--370
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 366--370
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 371--372
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 371--372
+
+ []
+
+<Picture16.png, id=121, 539.01375pt x 298.11375pt>
+File: Picture16.png Graphic file (type png)
+ <use Picture16.png>
+Overfull \hbox (72.38724pt too wide) in paragraph at lines 375--376
+[] 
+ []
+
+[30 <./Picture14.png (PNG copy)> <./Picture15.png (PNG copy)>]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+
+Underfull \hbox (badness 10000) in paragraph at lines 377--378
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 377--378
+
+ []
+
+<Picture17.png, id=125, 552.0625pt x 292.09125pt>
+File: Picture17.png Graphic file (type png)
+ <use Picture17.png>
+Overfull \hbox (85.43596pt too wide) in paragraph at lines 379--380
+[][] 
+ []
+
+[31 <./Picture16.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 381--382
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 381--382
+
+ []
+
+<Picture18.png, id=130, 548.0475pt x 291.0875pt>
+File: Picture18.png Graphic file (type png)
+ <use Picture18.png>
+Overfull \hbox (81.42097pt too wide) in paragraph at lines 385--386
+[] 
+ []
+
+[32 <./Picture17.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 387--388
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 387--388
+
+ []
+
+<Picture19.png, id=134, 542.025pt x 288.07625pt>
+File: Picture19.png Graphic file (type png)
+ <use Picture19.png>
+Overfull \hbox (75.39848pt too wide) in paragraph at lines 389--390
+[][] 
+ []
+
+[33 <./Picture18.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 391--392
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 391--392
+
+ []
+
+<Picture20.png, id=138, 545.03625pt x 645.41125pt>
+File: Picture20.png Graphic file (type png)
+ <use Picture20.png>
+Overfull \hbox (78.40974pt too wide) in paragraph at lines 395--396
+[] 
+ []
+
+[34 <./Picture19.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 397--398
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 397--398
+
+ []
+
+[35 <./Picture20.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 399--400
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 399--400
+
+ []
+
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+
+Underfull \hbox (badness 10000) in paragraph at lines 404--406
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 404--406
+
+ []
+
+[36]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ô in font cmr12!
+ [37]
+
+Package pdftex.def Warning: Option `bb' does not make sense,
+(pdftex.def)                using `viewport' instead on input line 426.
+
+<Proposal.pdf, id=152, page=1, 597.23125pt x 845.1575pt>
+File: Proposal.pdf Graphic file (type pdf)
+
+<use Proposal.pdf, page 1>
+Overfull \hbox (3.1287pt too wide) in paragraph at lines 426--427
+[] 
+ []
+
+[38]
 Overfull \vbox (7.84564pt too high) has occurred while \output is active []
 
 
-[19 <./Proposal.pdf>]
+[39 <./Proposal.pdf>]
 
 Package pdftex.def Warning: Option `bb' does not make sense,
-(pdftex.def)                using `viewport' instead on input line 299.
+(pdftex.def)                using `viewport' instead on input line 428.
 
-<Proposal.pdf, id=89, page=2, 597.23125pt x 845.1575pt>
+<Proposal.pdf, id=172, page=2, 597.23125pt x 845.1575pt>
 File: Proposal.pdf Graphic file (type pdf)
 
 <use Proposal.pdf, page 2>
-Overfull \hbox (3.1287pt too wide) in paragraph at lines 299--300
+Overfull \hbox (3.1287pt too wide) in paragraph at lines 428--429
 [][] 
  []
 
-[20 <./Proposal.pdf>]
+[40 <./Proposal.pdf>]
 
 Package pdftex.def Warning: Option `bb' does not make sense,
-(pdftex.def)                using `viewport' instead on input line 301.
+(pdftex.def)                using `viewport' instead on input line 430.
 
-<Proposal.pdf, id=106, page=3, 597.23125pt x 845.1575pt>
+<Proposal.pdf, id=189, page=3, 597.23125pt x 845.1575pt>
 File: Proposal.pdf Graphic file (type pdf)
 
 <use Proposal.pdf, page 3>
-Overfull \hbox (3.1287pt too wide) in paragraph at lines 301--302
+Overfull \hbox (3.1287pt too wide) in paragraph at lines 430--431
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 305--306
+Underfull \hbox (badness 10000) in paragraph at lines 434--435
 
  []
 
 (./lstlang1.sty
 File: lstlang1.sty 2004/09/05 1.3 listings language file
-) [21 <./Proposal.pdf>] (./Agent.m
+) [41 <./Proposal.pdf>] (./Agent.m
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 30.
 
 (/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
@@ -450,18 +781,13 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 30.
-
-Overfull \hbox (69.17389pt too wide) in paragraph at lines 30--31
-[][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[22])
-Underfull \hbox (badness 10000) in paragraph at lines 316--317
+ [42])
+Underfull \hbox (badness 10000) in paragraph at lines 445--446
 
  []
 
-(./Cop.m [23])
-Underfull \hbox (badness 10000) in paragraph at lines 327--328
+(./Cop.m [43])
+Underfull \hbox (badness 10000) in paragraph at lines 456--457
 
  []
 
@@ -476,514 +802,114 @@ File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/it' in size <12> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 33.
- [24]
-Overfull \hbox (55.07391pt too wide) in paragraph at lines 64--65
-[][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (12.77399pt too wide) in paragraph at lines 65--66
-[][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (118.5238pt too wide) in paragraph at lines 72--74
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
-
- []
-
-
-Overfull \hbox (55.07391pt too wide) in paragraph at lines 76--77
-[][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[25]
+ [44] [45]
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 121.
-
-Overfull \hbox (104.42383pt too wide) in paragraph at lines 125--126
-[][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (146.72375pt too wide) in paragraph at lines 127--128
-[][][][][][][][][][][][][][][][][] 
- []
-
-[26]
-Overfull \hbox (12.77399pt too wide) in paragraph at lines 131--132
-[][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (118.5238pt too wide) in paragraph at lines 142--143
-[][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (90.32385pt too wide) in paragraph at lines 144--145
-[][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (26.87396pt too wide) in paragraph at lines 148--149
-[][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (5.724pt too wide) in paragraph at lines 155--156
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 122.
+ [46]
+Overfull \hbox (5.724pt too wide) in paragraph at lines 162--163
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[27]
-Overfull \hbox (33.92395pt too wide) in paragraph at lines 206--207
-[][][][][][][][][][][][][][] 
+[47] [48] [49]
+Overfull \hbox (12.77399pt too wide) in paragraph at lines 304--306
+[][][][][][][][][][][][][][][][][][][][][] 
  []
 
-
-Overfull \hbox (33.92395pt too wide) in paragraph at lines 216--218
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+[50]
+Overfull \hbox (19.82397pt too wide) in paragraph at lines 324--325
+[][][][][][][][][][][][][][][][] 
  []
 
-[28]
-Overfull \hbox (90.32385pt too wide) in paragraph at lines 239--241
-[][][][][][][][][][][][][][][][][][][][][][][][][] 
+[51] [52]
+Overfull \hbox (5.724pt too wide) in paragraph at lines 440--441
+[][][][][][][][][][][][][] 
  []
 
-
-Overfull \hbox (62.1239pt too wide) in paragraph at lines 250--252
-[][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (76.22388pt too wide) in paragraph at lines 252--253
-[][][][][][][][][][][][][][][][][][][] 
- []
-
-[29]
-Overfull \hbox (485.12317pt too wide) in paragraph at lines 278--279
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][] 
- []
-
-
-Overfull \hbox (111.47382pt too wide) in paragraph at lines 282--283
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (26.87396pt too wide) in paragraph at lines 285--286
-[][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (217.22363pt too wide) in paragraph at lines 288--290
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (957.47235pt too wide) in paragraph at lines 294--295
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (40.97394pt too wide) in paragraph at lines 295--296
+[53]
+Overfull \hbox (5.724pt too wide) in paragraph at lines 476--477
 [][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (492.17316pt too wide) in paragraph at lines 300--301
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][] 
+Overfull \hbox (5.724pt too wide) in paragraph at lines 479--480
+[][][][][][][][][][] 
  []
 
 
-Overfull \hbox (139.67377pt too wide) in paragraph at lines 301--302
-[][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (534.47308pt too wide) in paragraph at lines 303--304
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (139.67377pt too wide) in paragraph at lines 304--305
-[][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (492.17316pt too wide) in paragraph at lines 306--307
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (139.67377pt too wide) in paragraph at lines 307--308
-[][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (534.47308pt too wide) in paragraph at lines 309--310
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (139.67377pt too wide) in paragraph at lines 310--311
-[][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (118.5238pt too wide) in paragraph at lines 313--314
-[][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (330.02344pt too wide) in paragraph at lines 318--319
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][] 
- []
-
-
-Overfull \hbox (62.1239pt too wide) in paragraph at lines 319--320
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[30]
-Overfull \hbox (203.12366pt too wide) in paragraph at lines 323--324
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (139.67377pt too wide) in paragraph at lines 324--325
-[][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (245.42358pt too wide) in paragraph at lines 326--327
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (139.67377pt too wide) in paragraph at lines 327--328
-[][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (203.12366pt too wide) in paragraph at lines 329--330
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (139.67377pt too wide) in paragraph at lines 330--331
-[][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (245.42358pt too wide) in paragraph at lines 332--333
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (139.67377pt too wide) in paragraph at lines 333--334
-[][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (118.5238pt too wide) in paragraph at lines 336--337
-[][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (160.82373pt too wide) in paragraph at lines 341--342
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (33.92395pt too wide) in paragraph at lines 342--343
-[][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (189.02368pt too wide) in paragraph at lines 346--347
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (111.47382pt too wide) in paragraph at lines 347--348
-[][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (231.32361pt too wide) in paragraph at lines 349--350
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (111.47382pt too wide) in paragraph at lines 350--351
-[][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (189.02368pt too wide) in paragraph at lines 352--353
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (111.47382pt too wide) in paragraph at lines 353--354
-[][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (231.32361pt too wide) in paragraph at lines 355--356
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (111.47382pt too wide) in paragraph at lines 356--357
-[][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (76.22388pt too wide) in paragraph at lines 360--361
-[][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (83.27386pt too wide) in paragraph at lines 363--364
-[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (48.02393pt too wide) in paragraph at lines 365--366
-[][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (33.92395pt too wide) in paragraph at lines 366--367
-[][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (5.724pt too wide) in paragraph at lines 368--369
+Overfull \hbox (5.724pt too wide) in paragraph at lines 480--481
 [][][][][][][][][][][][][] 
  []
 
-
-Overfull \hbox (146.72375pt too wide) in paragraph at lines 369--371
-[][][][][][][][][][][][][][][][][][] 
- []
-
-[31]
-Overfull \hbox (55.07391pt too wide) in paragraph at lines 374--375
-[][][][][][][][][][][][][][]
- []
-
-
-Overfull \hbox (62.1239pt too wide) in paragraph at lines 375--376
-[][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (55.07391pt too wide) in paragraph at lines 376--377
-[][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (153.77374pt too wide) in paragraph at lines 381--382
+[54]
+Overfull \hbox (5.724pt too wide) in paragraph at lines 551--552
 [][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (146.72375pt too wide) in paragraph at lines 383--384
-[][][][][][][][][][][][][] 
+Overfull \hbox (5.724pt too wide) in paragraph at lines 557--558
+[][][][][][][][][][][][][][][][][][][] 
  []
 
-
-Overfull \hbox (97.37384pt too wide) in paragraph at lines 384--386
-[][][][][][][][][][][][][][][][]
- []
-
-
-Overfull \hbox (55.07391pt too wide) in paragraph at lines 389--390
-[][][][][][][][][][][][][][]
- []
-
-
-Overfull \hbox (19.82397pt too wide) in paragraph at lines 392--394
-[][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (1345.22168pt too wide) in paragraph at lines 394--395
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (97.37384pt too wide) in paragraph at lines 396--398
+[55]
+Overfull \hbox (5.724pt too wide) in paragraph at lines 564--565
 [][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (33.92395pt too wide) in paragraph at lines 400--402
-[][][][][][][][][][][][][][][] 
+Overfull \hbox (5.724pt too wide) in paragraph at lines 570--571
+[][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (55.07391pt too wide) in paragraph at lines 405--406
-[][][][][][][][][][][][][][] 
+Overfull \hbox (19.82397pt too wide) in paragraph at lines 605--606
+[][][][][][][][] 
+ []
+
+[56] [57]
+Overfull \hbox (5.724pt too wide) in paragraph at lines 666--667
+[][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (640.2229pt too wide) in paragraph at lines 406--407
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
-
+Overfull \hbox (5.724pt too wide) in paragraph at lines 680--681
+[][][][][][][][][][][][][][][][][][][] 
  []
 
-
-Overfull \hbox (48.02393pt too wide) in paragraph at lines 407--408
-[][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (104.42383pt too wide) in paragraph at lines 412--414
-[][][][][][][][][][][][][][][][][][] 
- []
-
-[32]
-Overfull \hbox (33.92395pt too wide) in paragraph at lines 416--418
-[][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (196.07367pt too wide) in paragraph at lines 450--451
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (160.82373pt too wide) in paragraph at lines 451--452
-[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (210.17365pt too wide) in paragraph at lines 452--453
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (132.62378pt too wide) in paragraph at lines 453--454
-[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (238.3736pt too wide) in paragraph at lines 455--456
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-] 
- []
-
-
-Overfull \hbox (160.82373pt too wide) in paragraph at lines 456--457
-[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (252.47357pt too wide) in paragraph at lines 457--458
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-] 
- []
-
-
-Overfull \hbox (132.62378pt too wide) in paragraph at lines 458--459
-[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (160.82373pt too wide) in paragraph at lines 460--461
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (125.57379pt too wide) in paragraph at lines 461--462
-[][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (174.9237pt too wide) in paragraph at lines 462--463
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (97.37384pt too wide) in paragraph at lines 463--464
-[][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[33]
-Overfull \hbox (203.12366pt too wide) in paragraph at lines 465--466
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (125.57379pt too wide) in paragraph at lines 466--467
-[][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (217.22363pt too wide) in paragraph at lines 467--468
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (97.37384pt too wide) in paragraph at lines 468--469
-[][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (908.12244pt too wide) in paragraph at lines 473--474
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (576.77301pt too wide) in paragraph at lines 474--475
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-] 
- []
-
-
-Overfull \hbox (217.22363pt too wide) in paragraph at lines 492--493
-[][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[34]
-Overfull \hbox (1845.77081pt too wide) in paragraph at lines 525--526
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (1895.12073pt too wide) in paragraph at lines 532--533
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][] 
- []
-
-[35]
+[58]
 LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 568.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 718.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 338--339
+Underfull \hbox (badness 10000) in paragraph at lines 467--468
 
  []
 
-(./Empty.m [36])
-Underfull \hbox (badness 10000) in paragraph at lines 349--350
+(./Displaycentre.m [59]
+Overfull \hbox (5.724pt too wide) in paragraph at lines 7--8
+[][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (5.724pt too wide) in paragraph at lines 48--49
+[][][][][][][][][][][][][][][] 
+ []
+
+[60])
+Underfull \hbox (badness 10000) in paragraph at lines 478--479
+
+ []
+
+(./Displayline.m
+Overfull \hbox (5.724pt too wide) in paragraph at lines 7--8
+[][][][][][][][][][][][][][][][][][][] 
+ []
+
+[61])
+Underfull \hbox (badness 10000) in paragraph at lines 489--490
+
+ []
+
+(./Empty.m [62])
+Underfull \hbox (badness 10000) in paragraph at lines 500--501
 
  []
 
@@ -991,36 +917,36 @@ Underfull \hbox (badness 10000) in paragraph at lines 349--350
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.360 ... from source file \texttt{select_field.m}
+l.511 ... from source file \texttt{select_field.m}
                                                    \\
 ? 
 ! Extra }, or forgotten $.
 <recently read> \egroup 
                         
-l.360 ... from source file \texttt{select_field.m}
+l.511 ... from source file \texttt{select_field.m}
                                                    \\
 ? 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.361 
+l.512 
       
 ? 
 
-Underfull \hbox (badness 10000) in paragraph at lines 360--361
+Underfull \hbox (badness 10000) in paragraph at lines 511--512
 
  []
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.368 ...d,label=lst:select_field]{select_field.m}
+l.519 ...d,label=lst:select_field]{select_field.m}
                                                   
 ? 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.368 ...d,label=lst:select_field]{select_field.m}
+l.519 ...d,label=lst:select_field]{select_field.m}
                                                   
 ? 
 (./select_field.m
@@ -1032,30 +958,29 @@ Overfull \hbox (0.2089pt too wide) in paragraph at lines 1--2
  []
 
 
-Overfull \hbox (103.9498pt too wide) in paragraph at lines 5--6
-[][][][][][][][][][][][][][][][][][][][][][][] 
+Overfull \hbox (0.2089pt too wide) in paragraph at lines 5--6
+[][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[37]
-Overfull \hbox (274.38129pt too wide) in paragraph at lines 18--20
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
-
+[63]
+Overfull \hbox (0.2089pt too wide) in paragraph at lines 19--20
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-) [38] (./Report.aux)
+) [64] (./Report.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  )
 (\end occurred inside a group at level 1)
 
-### simple group (level 1) entered at line 360 ({)
+### simple group (level 1) entered at line 511 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 4924 strings out of 495061
- 65023 string characters out of 1182620
- 192879 words of memory out of 3000000
- 8004 multiletter control sequences out of 15000+50000
+ 5031 strings out of 495061
+ 66746 string characters out of 1182620
+ 187144 words of memory out of 3000000
+ 8084 multiletter control sequences out of 15000+50000
  15126 words of font info for 59 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  41i,11n,40p,628b,2014s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1073,9 +998,9 @@ xlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts
 c/amsfonts/cm/cmti12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/
 cm/cmtt12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/latxfont/lc
 ircle1.pfb>
-Output written on Report.pdf (38 pages, 428672 bytes).
+Output written on Report.pdf (64 pages, 1597845 bytes).
 PDF statistics:
- 231 PDF objects out of 1000 (max. 8388607)
+ 333 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 121 words of extra memory for PDF output out of 10000 (max. 10000000)
 
